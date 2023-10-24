@@ -8,66 +8,81 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: public/images/uploads # Media files will be stored in the repo under static/images/uploads
+public_folder: /images/uploads # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "homepage"
-    label: "Homepage"
+  - name: "assets"
+  label: "Assets"
+  files:
+    - label: "Logos"
+      name: "logos"
+      file: "/public/metadata/logos.md"
+      fields: 
+        - {label: "Header Logo", name: "headerLogo", widget: "image"}
+        - {label: "Footer Logo", name: "footerLogo", widget: "image"}
+  - name: homepage
+    label: Homepage
     files: 
-      - label: "Homepage"
-        name: "home"
-        file: "/public/src/pages/index.astro"
+      - label: Homepage
+        name: home
+        file: /public/src/pages/index.astro
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - label: "Banner"
-            name: "banner"
-            widget: "object"
+          - {label: Title, name: title, widget: string}
+
+
+          - label: Banner
+            name: banner
+            widget: object
             fields: 
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Info", name: "info", widget: "list", allow_add: true}
-              - {label: "Image", name: "image", widget: "image"}
-          - label: "Services"
-            name: "services"
-            widget: "object"
+              - {label: Heading, name: heading, widget: string}
+              - {label: Info, name: info, widget: list, allow_add: true}
+              - {label: Image, name: image, widget: image}
+
+
+          - label: Services
+            name: services
+            widget: object
             fields: 
-              - {label: "Heading", name: "heading", widget: "string"}
-              - label: "Item"
-                name: "item"
-                widget: "list"
+              - {label: Heading, name: heading, widget: string}
+              - label: Service
+                name: service
+                widget: list
                 allow_add: true
                 fields: 
-                  - {label: "Service", name: "service", widget: "string"}
-                  - {label: "Description", name: "description", widget: "string"}
-          - label: "Comparison Chart"
-            name: "comparison-chart"
-            widget: "object"
+                  - {label: Item, name: item, widget: string}
+                  - {label: Description, name: description, widget: string}
+
+
+          - label: Comparison Chart
+            name: comparison-chart
+            widget: object
             fields: 
-              - {label: "Heading", name: "heading", widget: "string"}
-              - label: "Work Type"
-                name: "work-type"
-                widget: "list"
+              - {label: Heading, name: heading, widget: string}
+              - label: Work Type
+                name: work-type
+                widget: list
                 allow_add: true
                 fields: 
-                  - label: "Work Type: Item"
-                    name: "work-type-item"
-                    widget: "object"
+                  - label: Work Type- Item
+                    name: work-type-item
+                    widget: object
                     fields: 
-                      - {label: "Heading", name: "heading", widget: "string"}
-                      - label: "Item"
-                        name: "item"
-                        widget: "list"
+                      - {label: Heading, name: heading, widget: string}
+                      - label: Item
+                        name: item
+                        widget: list
                         allow_add: true
-                        field: {label: "item", name: "item", widget: "string"}
+                        field: {label: item, name: item, widget: string}
 
                         
-          - label: "Contact Prompt"
-            name: "contact-prompt"
-            widget: "object"
+          - label: Contact Prompt
+            name: contact-prompt
+            widget: object
             fields: 
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Text", name: "text", widget: "string"}
-              - {label: "Link", name: "link", widget: "string"}
+              - {label: Heading, name: heading, widget: string}
+              - {label: Text, name: text, widget: string}
+              - {label: Link, name: link, widget: string}
 
           
 
