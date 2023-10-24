@@ -12,13 +12,63 @@ media_folder: "public/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "content"
-    label: "Content Page"
-    folder: "/public/src/content"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  
+  - name: "homepage"
+    label: "Homepage"
+    files: 
+      - label: "Homepage"
+        name: "home"
+        file: "/public/src/pages/index.astro"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - label: "Banner"
+            name: "banner"
+            widget: "object"
+            fields: 
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Info", name: "info", widget: "list", allow_add: true}
+              - {label: "Image", name: "image", widget: "image"}
+          - label: "Services"
+            name: "services"
+            widget: "object"
+            fields: 
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Item"
+                name: "item"
+                widget: "list"
+                allow_add: true
+                fields: 
+                  - {label: "Service", name: "service", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
+          - label: "Comparison Chart"
+            name: "comparison-chart"
+            widget: "object"
+            fields: 
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Work Type"
+                name: "work-type"
+                widget: "list"
+                allow_add: true
+                fields: 
+                  - label: "Work Type: Item"
+                    name: "work-type-item"
+                    widget: "object"
+                    fields: 
+                      - {label: "Heading", name: "heading", widget: "string"}
+                      - label: "Item"
+                        name: "item"
+                        widget: "list"
+                        allow_add: true
+                        field: {label: "item", name: "item", widget: "string"}
+
+                        
+          - label: "Contact Prompt"
+            name: "contact-prompt"
+            widget: "object"
+            fields: 
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "Link", name: "link", widget: "string"}
+
+          
+
+      
