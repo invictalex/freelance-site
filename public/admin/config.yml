@@ -1,0 +1,24 @@
+local_backend: true
+
+backend:
+  #name: git-gateway
+  name: proxy
+  branch: main
+  proxy_url: http://localhost:8081/api/v1
+
+publish_mode: editorial_workflow
+
+media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  - name: "content"
+    label: "Content Page"
+    folder: "/public/src/content"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  
