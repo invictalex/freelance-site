@@ -29,7 +29,7 @@ collections:
     files: 
       - label: Homepage
         name: home
-        file: "/public/src/pages/content/index.md"
+        file: "/src/pages/content/index.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: ../index.astro*}
@@ -40,8 +40,12 @@ collections:
             widget: object
             fields: 
               - {label: Heading, name: heading, widget: string}
-              - {label: Info, name: info, widget: list, allow_add: true}
               - {label: Image, name: image, widget: image}
+              - label: Info
+                name: info 
+                widget: list 
+                allow_add: true
+                field: {label: Item, name: item, widget: string}
 
 
           - label: Services

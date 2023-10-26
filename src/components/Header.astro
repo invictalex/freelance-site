@@ -12,7 +12,6 @@ import * as logos from "../../public/metadata/logos.md"
         <a href="/"><img src={logos.frontmatter.headerLogo} class="h-auto w-32" /></a>
 
         <div id="reg-menu" class="flex gap-5">
-            <a href="/" class={slider}>home</a>
             {navLinks.map(navLink => (
                 <a class={`lowercase ${slider}`} href={navLink.url}>{navLink.frontmatter.title}</a>
             ))}

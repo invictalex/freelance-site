@@ -1,6 +1,20 @@
 ---
 import Main from "../layouts/Main.astro";
+export interface Props {
+    content: {
+        title: string;
+        image: string;
+        heading: string;
+    }
+}
+
+
+const { content : {title, image, heading} } = Astro.props as Props
+
 ---
+
 <Main title="Home">
-    <h1>Hello</h1>
+<p>{title}</p>
+<p>{image}</p>
+<p>{heading}</p>
 </Main>
