@@ -1,20 +1,17 @@
 ---
 import Main from "../layouts/Main.astro";
-export interface Props {
-    content: {
-        title: string;
-        image: string;
-        heading: string;
-    }
-}
+import * as content from "./content/index.md"
+import Banner from "../components/Banner"
 
 
-const { content : {title, image, heading} } = Astro.props as Props
+const {title, banner, services, comparisonChart, ContactPrompt } = content.frontmatter
 
 ---
 
 <Main title="Home">
-<p>{title}</p>
-<p>{image}</p>
-<p>{heading}</p>
+    <Banner client:load
+        heading={banner.heading}
+        info={banner.info}
+        image={banner.image}
+    />
 </Main>

@@ -1,5 +1,6 @@
 ---
-title: Home!
+layout: ../index.astro
+title: Home
 banner:
   heading: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisl integer.
   info:
@@ -19,32 +20,33 @@ services:
     - description: Lorem ipsum dolor sit amet consectetur adipiscing elit, conubia
         nisl odio morbi sodales vel, enim mi habitasse id sed nullam.
       item: Content Management
-comparison-chart:
+comparisonChart:
   heading: Why hire a freelancer?
-  work-type:
-    - work-type-item:
+  workType:
+    - workTypeItem:
         heading: Agency
         item:
           - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - work-type-item:
+    - workTypeItem:
         heading: Me
         item:
           - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - work-type-item:
+    - workTypeItem:
         heading: Go solo
         item:
           - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-contact-prompt:
+contactPrompt:
   heading: Ready to make something beautiful?
   text: Need more time? Explore my
   link: services
 ---
+hello
