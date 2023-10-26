@@ -13,22 +13,26 @@ public_folder: /images/uploads # The src attribute for uploaded media will begin
 
 collections:
   - name: "assets"
-  label: "Assets"
-  files:
-    - label: "Logos"
-      name: "logos"
-      file: "/public/metadata/logos.md"
-      fields: 
-        - {label: "Header Logo", name: "headerLogo", widget: "image"}
-        - {label: "Footer Logo", name: "footerLogo", widget: "image"}
+    label: "Assets"
+    files:
+      - label: "Logos"
+        name: "logos"
+        file: "/public/metadata/logos.md"
+        fields: 
+          - {label: "Header Logo", name: "headerLogo", widget: "image"}
+          - {label: "Footer Logo", name: "footerLogo", widget: "image"}
+
+
+
   - name: homepage
     label: Homepage
     files: 
       - label: Homepage
         name: home
-        file: /public/src/pages/index.astro
+        file: "/public/src/pages/content/index.md"
         fields:
           - {label: Title, name: title, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: ../index.astro*}
 
 
           - label: Banner
