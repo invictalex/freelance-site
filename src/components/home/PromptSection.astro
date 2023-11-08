@@ -1,0 +1,19 @@
+---
+import Section from "../general/Section.astro";
+import PromptButton from "../home/PromptButton"
+---
+
+<div class="min-h-full pt-20 border-box bg-black text-white text-center">
+
+    <Section>
+        <h2 class="font-bold text-3xl text-center">Ready to make something beautiful?</h2>
+    </Section>
+
+    <Section>
+        <PromptButton client:visible/>
+    </Section>
+
+    <Section>
+        <p>Not just yet? Explore <a class="underline cursor-pointer">my services</a></p>
+    </Section>
+</div>

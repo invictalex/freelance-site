@@ -1,7 +1,11 @@
 ---
 import Main from "../layouts/Main.astro";
 import * as content from "./content/index.md"
-import Banner from "../components/Banner"
+import Banner from "../components/home/Banner"
+import ServicesSection from "../components/home/ServicesSection.astro"
+import Accordion from "../components/home/Accordion"
+import ChartSection from "../components/home/ChartSection"
+import PromptSection from "../components/home/PromptSection.astro"
 
 
 const {title, banner, services, comparisonChart, ContactPrompt } = content.frontmatter
@@ -14,4 +18,23 @@ const {title, banner, services, comparisonChart, ContactPrompt } = content.front
         info={banner.info}
         image={banner.image}
     />
+    <ServicesSection >
+        <h2 class="text-4xl font-bold" slot="heading">{services.heading}</h2>
+        <Accordion client:visible
+            items={services.service}
+            slot="accordion"
+        />
+    </ServicesSection>
+
+    <ChartSection client:visible
+        heading={comparisonChart.heading}
+        options={comparisonChart.workType}
+    
+    />
+
+    <PromptSection>
+
+    </PromptSection>
+
+
 </Main>

@@ -4,8 +4,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				"off-white" : "#f4f4f4"
-			}
+				"off-white" : "#f4f4f4",
+				"black": "#1a1a1a"
+			},
+			
 		},
 	},
 	plugins: [],

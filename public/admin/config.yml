@@ -17,7 +17,7 @@ collections:
     files:
       - label: "Logos"
         name: "logos"
-        file: "/public/metadata/logos.md"
+        file: "/src/pages/content/assets.md"
         fields: 
           - {label: "Header Logo", name: "headerLogo", widget: "image"}
           - {label: "Footer Logo", name: "footerLogo", widget: "image"}
