@@ -1,0 +1,18 @@
+---
+import Main from "../layouts/Main.astro";
+import ContentSwitcher from "../components/services/ContentSwitcher.jsx";
+import Prompt from "../components/home/Prompt.astro";
+
+const services = (await Astro.glob("./content/services/*"))
+
+---
+
+<Main>
+    <ContentSwitcher 
+        client:load
+        services={services}
+    />
+
+    <Prompt/>
+
+</Main>

@@ -1,8 +1,9 @@
 ---
 import BurgerMenu from "./BurgerMenu.jsx"
+const slider = "after:block after:w-0 after:h-px after:bg-white after:duration-300 hover:after:w-full"
 
 const navLinks = (await Astro.glob("../../pages/content/*"))
-const slider = "after:block after:w-0 after:h-px after:bg-black after:duration-300 hover:after:w-full"
+
 
 import * as assets from "../../pages/content/assets.md"
 ---
@@ -12,11 +13,11 @@ import * as assets from "../../pages/content/assets.md"
     <div class="w-full max-w-7xl flex justify-between items-center m-auto">
         <a href="/"><img src={assets.frontmatter.headerLogo} class="h-auto w-16" /></a>
 
-        <div id="reg-menu" class="flex gap-5">
+        <div id="reg-menu" class="flex items-center gap-5 text-white">
             {navLinks.map(navLink => (
                 <a class={`lowercase ${slider}`} href={navLink.url}>{navLink.frontmatter.title}</a>
             ))}
-            <a href="/contact" class={slider}>contact</a>
+            <a href="/contact" class="px-4 pb-1 pt-[0.1rem] bg-orange rounded-full" >contact</a>
         </div>
             
         <BurgerMenu 

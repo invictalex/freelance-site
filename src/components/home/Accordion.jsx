@@ -36,24 +36,24 @@ export default function Accordion(props){
 
     const itemsJSX = items.map((item, i) => (
         <motion.div key={i} 
-            className=" border-b border-black relative overflow-hidden h-16 hover:cursor-pointer group"
+            className=" border-b border-blue-lt relative overflow-hidden h-16 hover:cursor-pointer group"
             onClick={() => manageStatus(i)}
 
             animate={{height: display[i] ? "auto" : "4rem"}}
             initial={{height: "4rem"}}
         >
             <div className="flex items-center justify-between  my-5">
-                <h3 className="text-lg font-semibold group-hover:underline ">
+                <h3 className="text-lg  font-semibold group-hover:underline ">
                     {item.item}
                 </h3>
                 <img 
-                src={downArrow} className="w-7 h-7 duration-150 invert"
+                src={downArrow} className="w-7 h-7 duration-150"
                 style={display[i] ? {transform: "rotate(180deg)"} : {transform: "rotate(0deg)"}}
                 />
 
             </div>
             
-            <p className="mb-5">
+            <p className="mb-5 ">
                 {item.description}
             </p>
             

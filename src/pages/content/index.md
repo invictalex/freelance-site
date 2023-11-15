@@ -1,13 +1,13 @@
 ---
-layout: ../index.astro
 title: Home
+layout: ../index.astro
 banner:
   heading: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisl integer.
   info:
     - Lorem ipsum dolor sit amet consectetur, adipiscing elit nisl integer.
     - Lorem ipsum dolor sit amet consectetur, adipiscing elit nisl integer.
     - Lorem ipsum dolor sit amet consectetur, adipiscing elit nisl integer.
-  image: /images/uploads/web-development-0.png
+  image: /images/uploads/new-bg.png
 services:
   heading: My services
   service:
@@ -49,4 +49,3 @@ contactPrompt:
   text: Need more time? Explore my
   link: services
 ---
-hello
