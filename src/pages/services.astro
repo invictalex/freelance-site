@@ -7,7 +7,7 @@ const services = (await Astro.glob("./content/services/*"))
 
 ---
 
-<Main>
+<Main title="services" bg="bg-slate">
     <ContentSwitcher 
         client:load
         services={services}

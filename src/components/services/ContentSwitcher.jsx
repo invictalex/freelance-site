@@ -44,9 +44,9 @@ export default function ContentSwitcher(props){
     
     
     return(
-            <div className="mt-20 py-20 flex flex-col items-center gap-10 relative">
+            <div className="py-20 flex flex-col items-center gap-10 relative">
                 <div className="p-20">
-                    <h2 class="text-3xl font-bold text-white text-center ">Services</h2>
+                    <h2 class="text-4xl font-bold text-blue-lt text-center mb-5">Services</h2>
                     <div className="space-y-10 flex flex-col">
                         <div className="w-60 h-60 left-1/2 relative">
 
@@ -65,8 +65,8 @@ export default function ContentSwitcher(props){
 
                         </div>
                 
-                        <div className="flex justify-between items-center gap-10 text-blue-lt w-80 overflow-hidden relative">
-                            <img src={arrow} className="w-5 h-5" onClick={handlePrev}/>
+                        <div className="flex justify-between items-center gap-10 text-blue-lt w-96 overflow-hidden relative">
+                            <img src={arrow} className="w-5 h-8 cursor-pointer hover:scale-125 duration-300" onClick={handlePrev}/>
                             <AnimatePresence custom={direction} mode="wait">
                                 <motion.h6 
                                     key={currentIndex}
@@ -76,13 +76,13 @@ export default function ContentSwitcher(props){
                                     exit="exit"
                                     custom={direction}
                                     transition={{ type: "ease", duration: 0.3}}
-                                    className="whitespace-nowrap overflow-hidden absolute left-1/2">
+                                    className="text-2xl font-bold whitespace-nowrap overflow-hidden absolute left-1/2 text-white">
                                         
                                         {service.title}
                                 </motion.h6>
                             </AnimatePresence>
                             
-                            <img src={arrow} className="w-5 h-5 transform rotate-180 fill-white" onClick={handleNext}/>
+                            <img src={arrow} className="w-5 h-8 transform rotate-180 cursor-pointer hover:scale-125 duration-300" onClick={handleNext}/>
                         </div>
                     </div>
                 </div>

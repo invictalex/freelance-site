@@ -3,9 +3,9 @@ import Accordion from "./Accordion.jsx"
 
 export default function ServicesWidget(props){
         return(
-                <div class="w-full h-screen bg-dark-slate text-white py-24">
+                <div className="w-full h-screen bg-dark-slate text-white py-24">
                         <Section slot={
-                                <h2 class="text-4xl font-bold" slot="heading">{props.heading}</h2>
+                                <h2 className="text-4xl font-bold" slot="heading">{props.heading}</h2>
                         }/>
 
                         <Section slot={
