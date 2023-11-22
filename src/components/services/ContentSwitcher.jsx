@@ -44,7 +44,7 @@ export default function ContentSwitcher(props){
     
     
     return(
-            <div className="py-20 flex flex-col items-center gap-10 relative">
+            <div className="py-20 flex flex-col items-center gap-10 relative bg-slate">
                 <div className="p-20">
                     <h2 class="text-4xl font-bold text-blue-lt text-center mb-5">Services</h2>
                     <div className="space-y-10 flex flex-col">
@@ -98,31 +98,10 @@ export default function ContentSwitcher(props){
                     </motion.div>
                 </AnimatePresence>
 
-                <div className="bg-white w-full  max-w-7xl rounded-[8rem] mx-auto pb-20 px-5 z-20 -mt-10 mb-20">
+                <div className="bg-white w-full">
 
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={currentIndex}
-                            initial={{opacity: 0}}
-                            animate={{opacity: 1}}
-                            exit={{opacity: 0}}
-                            transition={{type: "ease", duration: 0.3}}
-                        >
-                            {sections.map((section, i) => (
-                                <div className="p-12 pt-16" 
-                                    key={currentIndex}
-                                    initial={{opacity: 0}}
-                                    animate={{opacity: 1}}
-                                    transition={{duration: 0.3}}
-                                >
-                                    <h4>{section.sectionTitle}</h4>
-                                    <p>{section.sectionBody}</p>
-                                </div>
-
-                            ))}
-                        </motion.div>
-                    </AnimatePresence>
                 </div>
+
             </div>
         
         )
