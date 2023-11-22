@@ -13,7 +13,7 @@ export default function ComparisonTable(props){
         
             <li 
                 key={i}
-                className="border-b border-white border-solid py-5 last-of-type:border-none"
+                className="border-b border-black border-solid py-5 last-of-type:border-none"
             >
                 {point}
             </li>
@@ -23,9 +23,9 @@ export default function ComparisonTable(props){
         return(
             <div 
                 key={i}
-                className={`rounded-lg p-6 ${i === 1 && "border-4 border-solid border-blue text-white"}`}
+                className={`rounded-lg p-6 ${i === 1 && "border-2 border-solid border-black text-black"}`}
             >
-                <h6 className="border-b-2 border-white border-solid pb-5 text-2xl font-semibold">
+                <h6 className="border-b-2 border-black border-solid pb-5 text-2xl font-semibold">
                     {heading}
                 </h6>
                 <ul
@@ -37,7 +37,7 @@ export default function ComparisonTable(props){
     })
 
     return(
-        <div className="min-h-screen py-24 border-box text-white">
+        <div className="min-h-screen py-24 border-box text-black bg-white">
             <Section slot={
                 <h2 className="text-4xl font-bold">{props.heading}</h2>
             }/>

@@ -15,7 +15,7 @@ export default function Banner(props){
     } )
 
     return(
-        <div className="banner w-full h-screen flex text-white">
+        <div className="banner bg-slate w-full h-screen flex text-white">
             
 
             <div className="basis-1/2">

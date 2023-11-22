@@ -18,17 +18,17 @@ const {title, banner, services, comparisonChart, ContactPrompt } = content.front
         info={banner.info}
         image={banner.image}
     />
+    <ComparisonTable client:visible
+    heading={comparisonChart.heading}
+    options={comparisonChart.workType}
+/>
 
     <ServicesWidget client:visible
         heading={services.heading}
         items={services.service}
     />
 
-    <ComparisonTable client:visible
-        heading={comparisonChart.heading}
-        options={comparisonChart.workType}
-    />
-
+  
     <Prompt />
 
 </Main>

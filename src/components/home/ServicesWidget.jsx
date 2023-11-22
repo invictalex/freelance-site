@@ -13,7 +13,7 @@ export default function ServicesWidget(props){
                         }/>
 
                         <section className="pt-32 flex justify-center align-center">
-                                <button className="py-2 px-4 bg-orange text-lg font-semibold rounded-full">Full Breakdown</button>
+                                <button className="py-2 px-4 bg-orange text-white text-lg font-semibold rounded-full">Services Hub</button>
                         </section>
                 </div>
         )
