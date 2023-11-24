@@ -5,22 +5,19 @@ import Timeline from "../components/services/Timeline";
 import ContactForm from "../components/contact/ContactForm"
 ---
 <Main headerCol="bg-slate" bg="bg-slate">
-        <div class="bg-slate w-full h-52 flex justify-center items-end pb-10">
-            <div class="w-[80rem] px-5">
-                <h1 class="font-bold text-5xl text-blue-lt ">
-                    Interested in one or more of my services?
-                </h1>
-                
-            </div>
-            
+        <div class="c-section w-full max-w-7xl px-5 text-center">
+            <h1 class="font-bold text-5xl text-blue-lt ">
+                Interested in one or more of my services?
+            </h1>
         </div>
+
+        <div class="w-full">
+
+        </div>
+            
        
 
-    <Section>
-        <h6 class="text-slate text-xl font-semibold mt-20">
-            Explore what working together will look like
-        </h6>
-    </Section>
+    
     
         <Timeline client:load/>
         <ContactForm client:load/>
