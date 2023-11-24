@@ -15,22 +15,48 @@ collections:
 
 #general
 
-  - name: "assets"
-    label: "Assets"
+  - name: general
+    label: General
     files:
-      - label: "Logos"
-        name: "logos"
+      - label: Logos
+        name: logos
         file: "/src/pages/content/assets.md"
         fields: 
-          - {label: "Header Logo", name: "headerLogo", widget: "image"}
-          - {label: "Footer Logo", name: "footerLogo", widget: "image"}
+          - {label: Header Logo, name: headerLogo, widget: image}
+          - {label: Footer Logo, name: footerLogo, widget: image}
+
+      - label: Contact Prompt
+        name: contactPrompt
+        file: "/src/pages/content/prompt.md"
+        fields:
+          - {label: Headline, name: headline, widget: string}
+          - {label: Text, name: text, widget: string}
+          - label: Custom Request
+            name: customRequest
+            widget: object
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Text, name: text, widget: string}
+      
+      - label: Footer Links
+        name: footerLinks
+        file: "/src/pages/content/links.md"
+        fields:
+          - label: Footer Link
+            name: footerLink
+            widget: list
+            allow_add: true
+            fields: 
+              - {label: Text to Display, name: displayText, widget: string} 
+              - {label: URL, name: url, widget: string} 
+
+  - name: pages
+    label: Pages
+    files:  
 
 #home
 
-  - name: homepage
-    label: Homepage
-    files: 
-      - label: Homepage
+      - label: Home
         name: home
         file: "/src/pages/content/index.md"
         fields:
@@ -42,7 +68,7 @@ collections:
             name: banner
             widget: object
             fields: 
-              - {label: Heading, name: heading, widget: string}
+              - {label: Headline, name: headline, widget: string}
               - {label: Image, name: image, widget: image}
               - label: Info
                 name: info 
@@ -70,13 +96,13 @@ collections:
             widget: object
             fields: 
               - {label: Heading, name: heading, widget: string}
-              - label: Work Type
-                name: workType
+              - label: Item
+                name: item
                 widget: list
                 allow_add: true
                 fields: 
-                  - label: Work Type- Item
-                    name: workTypeItem
+                  - label: Work Type
+                    name: workType
                     widget: object
                     fields: 
                       - {label: Heading, name: heading, widget: string}
@@ -84,34 +110,21 @@ collections:
                         name: item
                         widget: list
                         allow_add: true
-                        field: {label: item, name: item, widget: string}
-
-                        
-          - label: Contact Prompt
-            name: contactPrompt
-            widget: object
-            fields: 
-              - {label: Heading, name: heading, widget: string}
-              - {label: Text, name: text, widget: string}
-              - {label: Link, name: link, widget: string}
-
+                        fields: 
+                          - label: item
+                            name: item
+                            widget: object
+                            fields: 
+                              - {label: Text, name: text, widget: string}
+                              - {label: "Tick", name: "tick", widget: "boolean", default: false}
 
 #services         
 
-  - name: services
-    label: Services
-    folder: "/src/pages/content/services"
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
-      - label: Section 
-        name: section
-        widget: list
-        allow_add: true
+      - name: services
+        label: Services
+        file: "/src/pages/content/services.md"
         fields: 
-        - {label: "Section Title", name: "sectionTitle", widget: "string"}
-        - {label: "Section Body", name: "sectionBody", widget: "string"}
+          - {label: hello, name: hello, widget: string}
 
 
 
