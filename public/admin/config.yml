@@ -95,28 +95,20 @@ collections:
             name: comparisonChart
             widget: object
             fields: 
-              - {label: Heading, name: heading, widget: string}
-              - label: Item
-                name: item
+              - {label: Headline, name: headline, widget: string}
+              - label: Work Type
+                name: workType
                 widget: list
                 allow_add: true
                 fields: 
-                  - label: Work Type
-                    name: workType
-                    widget: object
+                  - {label: Heading, name: heading, widget: string}
+                  - label: Bullet Point
+                    name: bulletPoint
+                    widget: list
+                    allow_add: true
                     fields: 
-                      - {label: Heading, name: heading, widget: string}
-                      - label: Item
-                        name: item
-                        widget: list
-                        allow_add: true
-                        fields: 
-                          - label: item
-                            name: item
-                            widget: object
-                            fields: 
-                              - {label: Text, name: text, widget: string}
-                              - {label: "Tick", name: "tick", widget: "boolean", default: false}
+                      - {label: Text, name: text, widget: string}
+                      - {label: "Tick", name: "tick", widget: "boolean", default: false}
 
 #services         
 
@@ -124,7 +116,44 @@ collections:
         label: Services
         file: "/src/pages/content/services.md"
         fields: 
-          - {label: hello, name: hello, widget: string}
+          - {label: Title, name: title, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: ../services.astro*}
+          - label: Service
+            name: service
+            widget: list
+            allow_add: true
+            fields: 
+              - {label: Service Name, name: serviceName, widget: string}
+              - {label: Display Number, name: displayNumber, widget: number}
+              - {label: Image, name: image, widget: image}
+              - label: Paragraph
+                name: paragraph
+                widget: list
+                allow_add: true
+                fields: 
+                  - {label: Heading, name: heading, widget: string}
+                  - {label: Text, name: text, widget: text}
+
+
+#contact
+
+      - name: contact
+        label: Contact
+        file: "/src/pages/content/contact.md"
+        fields: 
+          - {label: Title, name: title, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: ../contact.astro*}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Subheading, name: subheading, widget: string}
+          - label: Timeline Item
+            name: timelineItem
+            widget: list
+            fields:
+              - {label: Item, name: item, widget: string, allow_add: true}
+              
+
+
+
 
 
 
