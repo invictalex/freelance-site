@@ -3,19 +3,19 @@ import Section from "../general/Section.jsx"
 
 export default function ComparisonTable(props){
 
-    const optionsArr = props.options
+    const workTypesArr = props.workType
 
-    const options = optionsArr.map((type, i) => {
+    const workTypes = workTypesArr.map((type, i) => {
         
-        const heading = type.workTypeItem.heading
-        const pointsArr = type.workTypeItem.item /*should be an array*/
-        const points = pointsArr.map((point, i) => (
+        const { heading, bulletPoint } = type
+
+        const bulletPoints = bulletPoint.map((point, i) => (
         
             <li 
                 key={i}
                 className="border-b border-white border-solid py-5 last-of-type:border-none"
             >
-                {point}
+                {point.text}
             </li>
             )
         )
@@ -30,7 +30,7 @@ export default function ComparisonTable(props){
                 </h6>
                 <ul
                 >
-                    {points}
+                    {bulletPoints}
                 </ul>
             </div>
         )
@@ -44,7 +44,7 @@ export default function ComparisonTable(props){
 
             <Section slot={
                 <div className="flex gap-5 justify-center">
-                        {options}
+                        {workTypes}
                 </div>
             }/>
         </div>

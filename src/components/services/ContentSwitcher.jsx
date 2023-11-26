@@ -2,17 +2,15 @@ import  { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 
 
-export default function ContentSwitcher(props){
+export default function ContentSwitcher({content}){
 
     const arrow = "/src/images/leftArrow.svg"
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const { services } = props
     
-    const service = services[currentIndex].frontmatter
+    const { serviceName, image, paragraph } = content[currentIndex]
 
-    const sections = service.section
 
 
 
@@ -31,14 +29,14 @@ export default function ContentSwitcher(props){
     const handleNext = () => {
         setDirection("next");
         setCurrentIndex((prevIndex) =>
-        prevIndex + 1 === services.length ? 0 : prevIndex + 1
+        prevIndex + 1 === content.length ? 0 : prevIndex + 1
         );
     };
 
     const handlePrev = () => {
         setDirection("prev");
         setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? services.length - 1 : prevIndex - 1
+        prevIndex === 0 ? content.length - 1 : prevIndex - 1
         );
     };
     
@@ -51,7 +49,7 @@ export default function ContentSwitcher(props){
                         <div className="w-60 h-60 left-1/2 relative">
 
                             <AnimatePresence custom={direction} mode="wait">
-                                <motion.img src={service.image}  
+                                <motion.img src={image}  
                                     key={currentIndex}
                                     variants={variants}
                                     initial="enter"
@@ -78,7 +76,7 @@ export default function ContentSwitcher(props){
                                     transition={{ type: "ease", duration: 0.3}}
                                     className="text-2xl font-bold whitespace-nowrap overflow-hidden absolute left-1/2 text-white">
                                         
-                                        {service.title}
+                                        {serviceName}
                                 </motion.h6>
                             </AnimatePresence>
                             
@@ -108,15 +106,15 @@ export default function ContentSwitcher(props){
                             exit={{opacity: 0}}
                             transition={{type: "ease", duration: 0.3}}
                         >
-                            {sections.map((section, i) => (
+                            {paragraph.map((para, i) => (
                                 <div className="p-12 pt-16" 
                                     key={currentIndex}
                                     initial={{opacity: 0}}
                                     animate={{opacity: 1}}
                                     transition={{duration: 0.3}}
                                 >
-                                    <h4>{section.sectionTitle}</h4>
-                                    <p>{section.sectionBody}</p>
+                                    <h4>{para.heading}</h4>
+                                    <p>{para.text}</p>
                                 </div>
 
                             ))}

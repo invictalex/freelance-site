@@ -20,14 +20,14 @@ collections:
     files:
       - label: Logos
         name: logos
-        file: "/src/pages/content/assets.md"
+        file: "/src/content/assets.md"
         fields: 
           - {label: Header Logo, name: headerLogo, widget: image}
           - {label: Footer Logo, name: footerLogo, widget: image}
 
       - label: Contact Prompt
         name: contactPrompt
-        file: "/src/pages/content/prompt.md"
+        file: "/src/content/prompt.md"
         fields:
           - {label: Headline, name: headline, widget: string}
           - {label: Text, name: text, widget: string}
@@ -40,7 +40,7 @@ collections:
       
       - label: Footer Links
         name: footerLinks
-        file: "/src/pages/content/links.md"
+        file: "/src/content/links.md"
         fields:
           - label: Footer Link
             name: footerLink
@@ -50,6 +50,7 @@ collections:
               - {label: Text to Display, name: displayText, widget: string} 
               - {label: URL, name: url, widget: string} 
 
+
   - name: pages
     label: Pages
     files:  
@@ -58,7 +59,7 @@ collections:
 
       - label: Home
         name: home
-        file: "/src/pages/content/index.md"
+        file: "/src/pages/index.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: ../index.astro*}
@@ -114,7 +115,7 @@ collections:
 
       - name: services
         label: Services
-        file: "/src/pages/content/services.md"
+        file: "/src/pages/services.md"
         fields: 
           - {label: Title, name: title, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: ../services.astro*}
@@ -139,7 +140,7 @@ collections:
 
       - name: contact
         label: Contact
-        file: "/src/pages/content/contact.md"
+        file: "/src/pages/contact.md"
         fields: 
           - {label: Title, name: title, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: ../contact.astro*}
@@ -148,8 +149,9 @@ collections:
           - label: Timeline Item
             name: timelineItem
             widget: list
+            allow_add: true
             fields:
-              - {label: Item, name: item, widget: string, allow_add: true}
+              - {label: Item, name: item, widget: string}
               
 
 

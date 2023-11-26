@@ -1,5 +1,6 @@
 ---
 title: Home
+layout: "../pages/index.astro"
 banner:
   headline: Hi. I'm Alex, a digital designer.
   image: /images/uploads/purple2.png

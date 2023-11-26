@@ -1,11 +1,7 @@
 ---
+import * as assets from "../../content/assets.md"
 import BurgerMenu from "./BurgerMenu.jsx"
-const slider = "after:block after:w-0 after:h-px after:bg-white after:duration-300 hover:after:w-full"
-
-const navLinks = (await Astro.glob("../../pages/content/*"))
-
-
-import * as assets from "../../pages/content/assets.md"
+const sliderStyles = "after:block after:w-0 after:h-px after:bg-white after:duration-300 hover:after:w-full"
 ---
 
 <nav class="fixed z-20 top-0 left-0 h-20 w-full  px-5 flex justify-center backdrop-blur-md bg-slate bg-opacity-50 z-50">
@@ -14,15 +10,13 @@ import * as assets from "../../pages/content/assets.md"
         <a href="/"><img src={assets.frontmatter.headerLogo} class="h-auto w-16" /></a>
 
         <div id="reg-menu" class="flex items-center gap-5 text-white">
-            {navLinks.map(navLink => (
-                <a class={`lowercase ${slider}`} href={navLink.url}>{navLink.frontmatter.title}</a>
-            ))}
+            <a href="/" class={sliderStyles}>home</a>
+            <a href="/services" class={sliderStyles}>services</a>
             <a href="/contact" class="px-4 pb-1 pt-[0.1rem] text-slate bg-yellow rounded-full" >get started</a>
         </div>
             
         <BurgerMenu 
             client:visible 
-            navLinks={navLinks}
         />
     </div>
 

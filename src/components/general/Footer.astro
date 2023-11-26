@@ -1,5 +1,10 @@
 ---
-import * as assets from "../../pages/content/assets.md"
+import * as assets from "../../content/assets.md"
+import * as content from "../../content/links.md"
+
+const {footerLink} = content.frontmatter
+
+const {logo} = assets.frontmatter.footerLogo
 
 const lightUp = "duration-300 opacity-100 hover:opacity-80"
 
@@ -10,9 +15,9 @@ const lightUp = "duration-300 opacity-100 hover:opacity-80"
     
     <p >Alex Christodoulou © 2023</p>
     <div class="flex gap-10 items-center">
-        <a href="/"><img src={assets.frontmatter.footerLogo} class=`w-12 ${lightUp}`></a>
-        <a href=""><img src="/src/images/linkedin.svg" class=`w-6 ${lightUp}`></a>
-        <a href=""><img src="/src/images/github.svg" class=`w-6 ${lightUp}`></a>
+        <a href="/"><img src={logo} class=`w-12 ${lightUp}`></a>
+
+
     </div>
    
 </footer>

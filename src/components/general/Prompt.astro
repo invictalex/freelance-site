@@ -1,0 +1,25 @@
+---
+import Section from "../general/Section.astro";
+import PromptButton from "./PromptButton"
+import * as content from "../../content/prompt.md"
+
+const {headline, text, customRequest} = content.frontmatter
+---
+
+<div class="min-h-full pt-20 border-box bg-blue text-dark-slate text-center rounded-t-[8rem]">
+
+    <div>
+        <h2 class="font-bold text-3xl text-center">{headline}</h2>
+        <h6>{text}</h6>
+    </div>
+
+    <div>
+        <h4>{customRequest.heading}</h4>
+        <p>{customRequest.text}</p>
+    </div>
+
+    <Section>
+        <PromptButton client:visible/>
+    </Section>
+
+</div>

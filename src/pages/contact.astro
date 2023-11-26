@@ -1,25 +1,28 @@
 ---
 import Main from "../layouts/Main.astro";
-import Section from "../components/general/Section.astro";
-import Timeline from "../components/services/Timeline";
+import * as content from "./contact.md"
+import Timeline from "../components/contact/Timeline.jsx";
 import ContactForm from "../components/contact/ContactForm"
+
+const {title, heading, subHeading, timelineItem} = content.frontmatter
 ---
-<Main headerCol="bg-slate" bg="bg-slate">
+<Main title={title} >
         <div class="c-section w-full max-w-7xl px-5 text-center">
             <h1 class="font-bold text-5xl text-blue-lt ">
-                Interested in one or more of my services?
+                {heading}
             </h1>
+            <h6>{subHeading}</h6>
         </div>
 
         <div class="w-full">
 
         </div>
             
-       
+        <Timeline client:load
+            content={timelineItem}
+            
+        />
 
-    
-    
-        <Timeline client:load/>
         <ContactForm client:load/>
 
   

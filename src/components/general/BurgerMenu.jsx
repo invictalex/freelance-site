@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import {useState} from "react"
 
-export default function BurerMenu(props){
+export default function BurerMenu(){
 
     
     const [menuTray, setMenuTray] = useState(false)
@@ -26,10 +26,8 @@ export default function BurerMenu(props){
                     initial={{x:35}}
                 >
                     <a href="/">home</a>
-                    {props.navLinks.map(link => 
-                    <a className="lowercase" href={link.url}>{link.frontmatter.title}</a>
-                    )}
-                    <a href="/contact">contact</a>
+                    <a href="/">services</a>
+                    <a href="/contact">get started</a>
                 </motion.div>
             </motion.div>
         )}
