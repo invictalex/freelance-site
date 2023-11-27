@@ -25,7 +25,7 @@ export default function Banner({content}){
                         {headline}
                     </h1>
 
-                    <div className="h-2  w-[60%] bg-red"></div>
+                    <div className="h-2  w-[60%] bg-red" />
 
                     <ul className="space-y-6 w-[65%] min-w-[200px]">
                         {infoList}
