@@ -96,10 +96,11 @@ export default function ContentSwitcher({content}){
                     </motion.div>
                 </AnimatePresence>
 
-                <div className="bg-white w-full  max-w-7xl rounded-[8rem] mx-auto pb-20 px-5 z-20 -mt-10 mb-20">
+                <section className="bg-white z-20 -mt-10 mb-20">
 
                     <AnimatePresence mode="wait">
                         <motion.div
+                            className="container"
                             key={currentIndex}
                             initial={{opacity: 0}}
                             animate={{opacity: 1}}
@@ -107,7 +108,7 @@ export default function ContentSwitcher({content}){
                             transition={{type: "ease", duration: 0.3}}
                         >
                             {paragraph.map((para, i) => (
-                                <div className="p-12 pt-16" 
+                                <div className="" 
                                     key={currentIndex}
                                     initial={{opacity: 0}}
                                     animate={{opacity: 1}}
@@ -120,7 +121,7 @@ export default function ContentSwitcher({content}){
                             ))}
                         </motion.div>
                     </AnimatePresence>
-                </div>
+                </section>
             </div>
         
         )
