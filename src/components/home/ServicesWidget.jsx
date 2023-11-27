@@ -1,21 +1,28 @@
-import Section from "../general/Section.jsx"
 import Accordion from "./Accordion.jsx"
 
-export default function ServicesWidget(props){
+export default function ServicesWidget({content}){
+
+        const {heading, service} = content
+        
         return(
-                <div className="w-full h-screen bg-dark-slate text-white py-24">
-                        <Section slot={
-                                <h2 className="text-4xl font-bold" slot="heading">{props.heading}</h2>
-                        }/>
+                <section className="bg-slate-dark text-white ">
+                        <div className="container flex flex-col items-center">
+                                <h2 className="space w-full text-left text-4xl font-bold" slot="heading">
+                                        {heading}
+                                </h2>
 
-                        <Section slot={
-                                <Accordion items={props.items}/>
-                        }/>
+                                <div className="py-16">
+                                        <Accordion content={service}/>
 
-                        <section className="pt-32 flex justify-center align-center">
-                                <button className="py-2 px-4 bg-orange text-lg font-semibold rounded-full">Full Breakdown</button>
-                        </section>
-                </div>
+                                </div>
+
+                                <button className="text-center py-2 px-4 bg-blue text-black text-lg font-semibold rounded-full hover:bg-white duration-200 "><a href="/services">Services Hub</a></button>
+                
+                        </div>
+                       
+  
+                </section>
+
         )
 }
 

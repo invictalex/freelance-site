@@ -4,15 +4,15 @@ import BurgerMenu from "./BurgerMenu.jsx"
 const sliderStyles = "after:block after:w-0 after:h-px after:bg-white after:duration-300 hover:after:w-full"
 ---
 
-<nav class="fixed z-20 top-0 left-0 h-20 w-full  px-5 flex justify-center backdrop-blur-md bg-slate bg-opacity-50 z-50">
+<nav class="fixed z-20 top-0 left-0 h-20 w-full  flex justify-center backdrop-blur-md bg-slate bg-opacity-50 z-50">
 
-    <div class="w-full max-w-7xl flex justify-between items-center m-auto">
+    <div class="container flex justify-between items-center m-auto">
         <a href="/"><img src={assets.frontmatter.headerLogo} class="h-auto w-16" /></a>
 
         <div id="reg-menu" class="flex items-center gap-5 text-white">
             <a href="/" class={sliderStyles}>home</a>
             <a href="/services" class={sliderStyles}>services</a>
-            <a href="/contact" class="px-4 pb-1 pt-[0.1rem] text-slate bg-yellow rounded-full" >get started</a>
+            <a href="/contact" class="px-4 pb-1 pt-[0.1rem] text-black bg-blue rounded-full" >get started</a>
         </div>
             
         <BurgerMenu 

@@ -11,19 +11,17 @@ const {title, banner, services, comparisonChart} = content.frontmatter
 
 <Main title={title} >
     <Banner client:load
-        heading={banner.headline}
-        info={banner.info}
-        image={banner.image}
+        content={banner}
     />
 
     <ServicesWidget client:visible
-        heading={services.heading}
-        items={services.service}
+        content={services}
     />
 
     <ComparisonTable client:visible
         heading={comparisonChart.headline}
         workType={comparisonChart.workType}
+        content={comparisonChart}
     />
 
     <Prompt />

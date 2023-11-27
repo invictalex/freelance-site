@@ -1,6 +1,6 @@
 ---
 title: Get Started
-layout: "../pages/contact.astro"
+layout: "./contact.astro"
 heading: Getting Started
 subheading: Interested in one or more of my services? It's as east as
 timelineItem:

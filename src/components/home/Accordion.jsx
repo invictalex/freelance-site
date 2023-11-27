@@ -1,18 +1,12 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 
-export default function Accordion(props){
+export default function Accordion({content}){
+
 
     var downArrow = "/src/images/downArrow.svg"
 
-    const displayVariants = {
-        open: {    height: "auto", visibility: "visible" },
-        closed: {    height: "0px", visibility: "hidden" },
-    }
-
-    const items = props.items
-
-    const initialStatus = items.map(item => 0)
+    const initialStatus = content.map(item => 0)
 
     const [display, setDisplay] = useState(initialStatus)
 
@@ -34,7 +28,7 @@ export default function Accordion(props){
         setDisplay(newArr)
     }
 
-    const itemsJSX = items.map((item, i) => (
+    const servicesList = content.map(({item, description}, i) => (
         <motion.div key={i} 
             className=" border-b border-blue-lt relative overflow-hidden h-16 hover:cursor-pointer group"
             onClick={() => manageStatus(i)}
@@ -44,7 +38,7 @@ export default function Accordion(props){
         >
             <div className="flex items-center justify-between  my-5">
                 <h3 className="text-lg  font-semibold group-hover:underline ">
-                    {item.item}
+                    {item}
                 </h3>
                 <img 
                 src={downArrow} className="w-7 h-7 duration-150"
@@ -54,15 +48,15 @@ export default function Accordion(props){
             </div>
             
             <p className="mb-5 ">
-                {item.description}
+                {description}
             </p>
             
         </motion.div>
     ))
 
     return(
-        <div className="m-auto max-w-xl w-1/3 min-w-[20rem]">
-            {itemsJSX}
+        <div className="space m-auto max-w-xl w-1/3 min-w-[20rem]">
+            {servicesList}
         </div>
     )
 }
