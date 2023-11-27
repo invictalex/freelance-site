@@ -48,10 +48,10 @@ export default function ContentSwitcher({content}){
     
     return(
             <>
-                <div className="h-96 text-white flex items-end relative overflow-hidden">
+                <div className="container h-96 text-white flex items-end justify-between relative overflow-hidden">
                     <AnimatePresence mode="wait">
                     <motion.div 
-                        className="container flex flex-col gap-5 z-10"
+                        className="flex flex-col gap-5 z-10"
                         key={currentIndex}
                         initial={{opacity: 0, x: -100}}
                         animate={{opacity: 1, x:0}}
@@ -60,12 +60,12 @@ export default function ContentSwitcher({content}){
                     >
                         <h5 className="text-4xl font-semibold">Services</h5>
                         <div className="h-1 w-[150px] bg-red" />
-                        <h1 className="text-6xl font-semibold text-blue">{serviceName}</h1>
+                        <h1 className="text-6xl font-bold text-blue">{serviceName}</h1>
                         <p>
                             {serviceNamesArray.map((item, i) => (
                                 <span 
                                     key={i} 
-                                    className={`${i !== currentIndex ? "cursor-pointer" : " font-bold cursor-default" } italic`}
+                                    className={`${i !== currentIndex ? "cursor-pointer" : " font-bold cursor-default" } opacity-80 italic`}
                                     onClick={() => setCurrentIndex(i)}
                                 >
                                     {item} {i !== serviceNamesArray.length -1 && `  |   ` } 
@@ -87,26 +87,29 @@ export default function ContentSwitcher({content}){
                     </AnimatePresence>
 
                     <AnimatePresence mode="wait">
-                    <motion.img 
-                        src={image} 
-                        alt="banner-image"
-                        className="absolute -right-16 -bottom-20 z-0"
-                        key={currentIndex}
-                        initial={{opacity: 0, x: 100}}
-                        animate={{opacity: 1, x:0}}
-                        exit={{opacity: 0,  x: 100}}
-                        transition={{type: "spring", duration:0.4}}
-                    />
+                        <motion.img 
+                            src={image} 
+                            className="-mb-20 max-h-[490px]"
+                            alt="banner-image"
+                            key={currentIndex}
+                            initial={{opacity: 0, x: 100}}
+                            animate={{opacity: 1, x:0}}
+                            exit={{opacity: 0,  x: 100}}
+                            transition={{type: "spring", duration:0.4}}
+                            
+                        />
+                    
                     </AnimatePresence>
                 </div>
 
                 <AnimatePresence mode="wait">
                     <motion.div
-                    key={currentIndex}
-                    initial={{height:100}}
-                    animate={{height:5}}
-                    exit={{height:100}}
-                    transition={{type: "spring", duration:0.4}}
+                        className="-mt-2"
+                        key={currentIndex}
+                        initial={{height:100}}
+                        animate={{height:1}}
+                        exit={{height:100}}
+                        transition={{type: "spring", duration:0.4}}
                     />
                 </AnimatePresence>
 
@@ -129,7 +132,7 @@ export default function ContentSwitcher({content}){
                                     <p>{para.text}</p>
                                 </div>
                             ))}
-                            <p className="text-right text-lg cursor-pointer font-bold text-purple mt-20" onClick={backToTop}>More services</p>
+                            <p className="mr-10 text-right text-lg cursor-pointer font-bold text-purple mt-20" onClick={backToTop}>More services</p>
                         </motion.div>
                     </AnimatePresence>
 

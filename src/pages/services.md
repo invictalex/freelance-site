@@ -4,7 +4,7 @@ layout: ./services.astro
 service:
   - serviceName: Digital Branding
     displayNumber: 1
-    image: /images/uploads/purple2.png
+    image: /images/uploads/branding.svg
     paragraph:
       - heading: Choosing your brand's colours
         text: Lorem ipsum dolor sit amet consectetur adipiscing elit, tempor eleifend
@@ -35,7 +35,7 @@ service:
           viverra eros netus arcu hac potenti sociosqu.
   - serviceName: Websites
     displayNumber: 2
-    image: /images/uploads/purple2.png
+    image: /images/uploads/website4-1-.svg
     paragraph:
       - heading: Overview
         text: Lorem ipsum dolor sit amet consectetur adipiscing elit, tempor eleifend
@@ -75,7 +75,7 @@ service:
           viverra eros netus arcu hac potenti sociosqu.
   - serviceName: Content Management
     displayNumber: 2
-    image: /images/uploads/purple2.png
+    image: /images/uploads/content.svg
     paragraph:
       - heading: Content is King
         text: Lorem ipsum dolor sit amet consectetur adipiscing elit, tempor eleifend
