@@ -29,7 +29,7 @@ export default function BurerMenu(){
                     initial={{x:35}}
                 >
                     <a href="/" className="text-white text-lg">home</a>
-                    <a href="/" className="text-white text-lg ">services</a>
+                    <a href="/services" className="text-white text-lg ">services</a>
                     <a href="/contact" className="text-lg px-4 pb-1 pt-[0.1rem] text-black bg-blue rounded-full">get started</a>
                 </motion.div>
             </motion.div>

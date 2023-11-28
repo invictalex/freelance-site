@@ -4,26 +4,35 @@ import * as content from "./contact.md"
 import Timeline from "../components/contact/Timeline.jsx";
 import ContactForm from "../components/contact/ContactForm"
 
-const {title, heading, subHeading, timelineItem} = content.frontmatter
+const {title, heading, subheading, timelineItem} = content.frontmatter
 ---
-<Main title={title} >
-        <div class="c-section w-full max-w-7xl px-5 text-center">
-            <h1 class="font-bold text-5xl text-blue-lt ">
-                {heading}
-            </h1>
-            <h6>{subHeading}</h6>
+<Main title={title} footerColor="bg-slate" >
+    <section class="text-white">
+        <div class="container">
+
+            <div class="mb-12 md:w-1/2">
+                <h1 class="text-4xl font-semibold text-white">
+                    {heading}
+                </h1>
+                <div class="h-1 w-[250px] bg-red mt-5 mb-7" />
+
+                <h6 class="font-semibold text-blue text-3xl mb-8">
+                    {subheading}
+                </h6>
+            </div>
+
+            <div class="flex flex-col items-center gap-20 lg:flex-row lg:justify-around lg:items-start lg:gap-0">
+
+                <Timeline client:load
+                    content={timelineItem}
+                />
+                
+                <ContactForm client:load/>
+
+            </div>
+
+
         </div>
 
-        <div class="w-full">
-
-        </div>
-            
-        <Timeline client:load
-            content={timelineItem}
-            
-        />
-
-        <ContactForm client:load/>
-
-  
+    </section>
 </Main>

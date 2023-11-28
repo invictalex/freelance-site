@@ -25,7 +25,7 @@ export default function ComparisonTable({content}){
         return(
             <div 
                 key={i}
-                className={`rounded-lg p-6 ${i === 1 && "bg-purple bg-opacity-40 text-white"}`}
+                className={`max-w-sm rounded-lg p-6 ${i === 1 && "bg-purple bg-opacity-40 text-white"}`}
             >
                 <h6 className="border-b-2 border-white border-solid pb-5 text-2xl font-semibold">
                     {tableHead}
@@ -47,9 +47,7 @@ export default function ComparisonTable({content}){
 
                 <div className="space h-2 rounded-xs w-[200px] bg-red"></div>
 
-
-
-                <div className="flex gap-5 justify-center">
+                <div className="flex gap-5 justify-center max-lg:flex-col max-lg:items-center">
                     {table}
                 </div>
             </div>

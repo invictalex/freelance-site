@@ -9,7 +9,7 @@ import Prompt from "../components/general/Prompt.astro"
 const {title, banner, services, comparisonChart} = content.frontmatter
 ---
 
-<Main title={title} >
+<Main title={title} footerColor="bg-slate-dark">
     <Banner client:load
         content={banner}
     />

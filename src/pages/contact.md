@@ -1,9 +1,10 @@
 ---
 title: Get Started
-layout: "./contact.astro"
+layout: ./contact.astro
 heading: Getting Started
-subheading: Interested in one or more of my services? It's as east as
+subheading: Interested in one or more of my services? Scroll the timeline, below
 timelineItem:
+  - item: Send me a message
   - item: Telephone consultation
   - item: Agree timeline and fee
   - item: Visual draft sign-off

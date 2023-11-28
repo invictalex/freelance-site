@@ -18,7 +18,7 @@ services:
     - item: Content Management
       description: Keeping your website content up-to-date and search engine optimised
 comparisonChart:
-  headline: Why hire a freelancer?
+  headline: Who should build your website?
   workType:
     - heading: Find an agency
       bulletPoint:
@@ -40,7 +40,7 @@ comparisonChart:
         - tick: true
           text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
       heading: Work with me
-    - heading: Go solo
+    - heading: Use a web-builder
       bulletPoint:
         - tick: true
           text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.

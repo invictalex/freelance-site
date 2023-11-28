@@ -1,26 +1,30 @@
 import { useRef } from "react"
 import { motion } from "framer-motion"
+import blueTick from "../../images/blueTick.svg"
+import cube from "../../images/cube.svg"
 
-export default function Timeline(props) {
+export default function Timeline({content}) {
 
    const ref = useRef(null)
      
-    const timeline = props.content
 
-    const timelineItems = timeline.map(({item}, i) => (
+    const timeline = content.map(({item}, i) => (
         <div className="flex items-center z-10 relative" key={i}>
             
-            <motion.span className="w-5 h-5 rounded-full outline outline-8 outline-slate mr-10 inline"
-            initial={{scale: 0.5, backgroundColor: "rgb(148 161 184)"}}
-            whileInView={{scale: 1, backgroundColor: "#fff"}}
-            viewport={{root:ref,  margin: "-120px 0px -120px 0px"}}
-            ></motion.span>
+            <motion.div
+                className="w-9 h-9 z-20 bg-cover mr-8"
+                initial={{backgroundImage: `url(${cube.src})`, scale: 0.7}}
+                whileInView={{backgroundImage: `url(${blueTick.src})`, scale: 1}}
+                viewport={{root:ref}}
+            />
+            {i !== content.length -1 &&
+                <span className="absolute top-16 left-4 h-[6.5rem] w-[2px] bg-white bg-opacity-50"></span>}
 
             <motion.li 
-                className={`list-none inline my-8 z-100 `}
+                className={`list-none inline my-10 z-100 `}
                 initial={{fontSize: "1rem", opacity: 0.5}}
                 whileInView={{fontSize: "1.5rem", opacity: 1}}
-                viewport={{root:ref,  margin: "-120px 0px -120px 0px"}}
+                viewport={{root:ref}}
                 
             >
                 {item}
@@ -31,12 +35,8 @@ export default function Timeline(props) {
 
 
     return(
-        <div ref={ref} className="w-full text-white pl-20  h-[300px] overflow-scroll relative scrollbar-hide">
-            <span className="absolute h-[620px] w-[2px] bg-blue-lt ml-[0.59rem]"></span>
-           <div className="mb-20">
-           {timelineItems}
-
-           </div>
+        <div ref={ref} className="w-80 pb-64 h-[400px] overflow-scroll scrollbar-hide">
+            {timeline}
         </div>
     )
    

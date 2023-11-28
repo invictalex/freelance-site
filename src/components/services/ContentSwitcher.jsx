@@ -4,63 +4,34 @@ import { AnimatePresence, motion } from "framer-motion"
 
 export default function ContentSwitcher({content}){
 
-    const arrow = "/src/images/leftArrow.svg"
 
     const backToTop = () => window.scrollTo({ top: 0 })
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const changeService = (i) => {
-        setCurrentIndex(i)
-    }
-
-    
     const { serviceName, image, paragraph } = content[currentIndex]
 
     const serviceNamesArray = content.map((item) => (item.serviceName))
 
-    const [direction, setDirection] = useState("")
-
-    const variants = {
-        enter: (direction) => (direction === "next" ? { x: 300, opacity: 0 } : { x: -300, opacity: 0 }),
-        visible: {
-          x: "-50%",
-          opacity: 1,
-        },
-        exit: (direction) => (direction === "next" ? { x: -300, opacity: 0 } : { x: 300, opacity: 0 }),
-    };
-
-
-    const handleNext = () => {
-        setDirection("next");
-        setCurrentIndex((prevIndex) =>
-        prevIndex + 1 === content.length ? 0 : prevIndex + 1
-        );
-    };
-
-    const handlePrev = () => {
-        setDirection("prev");
-        setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? content.length - 1 : prevIndex - 1
-        );
-    };
     
     
     return(
             <>
-                <div className="container h-96 text-white flex items-end justify-between relative overflow-hidden">
+
+                <div className="container h-96 text-white flex items-end justify-between relative overflowy-hidden overflow-hidden lg:overflow-visible">
+                    
                     <AnimatePresence mode="wait">
                     <motion.div 
-                        className="flex flex-col gap-5 z-10"
+                        className="w-2/3 sm:w-full flex flex-col gap-5 z-20 "
                         key={currentIndex}
                         initial={{opacity: 0, x: -100}}
                         animate={{opacity: 1, x:0}}
                         exit={{opacity: 0,  x: -100}}
-                        transition={{type: "spring", duration:0.4}}
+                        transition={{ease: "linear", duration:0.2}}
                     >
                         <h5 className="text-4xl font-semibold">Services</h5>
                         <div className="h-1 w-[150px] bg-red" />
-                        <h1 className="text-6xl font-bold text-blue">{serviceName}</h1>
+                        <h1 className="text-6xl font-bold text-blue max-sm:text-5xl">{serviceName}</h1>
                         <p>
                             {serviceNamesArray.map((item, i) => (
                                 <span 
@@ -73,7 +44,7 @@ export default function ContentSwitcher({content}){
                             ))}
                         </p>
 
-                        <div className="flex gap-5 mb-8 mt-12">
+                        <div className="flex gap-5 mb-8 mt-2 sm:mt-12">
                             {serviceNamesArray.map((item, i) => (
                                 <span 
                                     key={i} 
@@ -85,17 +56,19 @@ export default function ContentSwitcher({content}){
                         </div>
                     </motion.div>
                     </AnimatePresence>
+                    {/*<div className="opacity-0 sm:opacity-0 w-screen h-96 bg-black absolute top-0 right-0 z-10"></div>*/}
+
 
                     <AnimatePresence mode="wait">
                         <motion.img 
                             src={image} 
-                            className="-mb-20 max-h-[490px]"
+                            className="w-[30rem] -mb-20 max-lg:w-[20rem] max-lg:mb-0 max-md:-mr-28 max-sm:!opacity-70"
                             alt="banner-image"
                             key={currentIndex}
                             initial={{opacity: 0, x: 100}}
                             animate={{opacity: 1, x:0}}
                             exit={{opacity: 0,  x: 100}}
-                            transition={{type: "spring", duration:0.4}}
+                            transition={{ease: "linear", duration:0.2}}
                             
                         />
                     
@@ -109,7 +82,7 @@ export default function ContentSwitcher({content}){
                         initial={{height:100}}
                         animate={{height:1}}
                         exit={{height:100}}
-                        transition={{type: "spring", duration:0.4}}
+                        transition={{ease: "linear", duration:0.2}}
                     />
                 </AnimatePresence>
 
@@ -122,7 +95,7 @@ export default function ContentSwitcher({content}){
                             initial={{opacity: 0}}
                             animate={{opacity: 1}}
                             exit={{opacity: 0}}
-                            transition={{type: "spring", duration:0.4}}
+                            transition={{ease: "linear", duration:0.2}}
                         >
                             {paragraph.map((para, i) => (
                                 <div  
