@@ -14,7 +14,6 @@ export default function ContentSwitcher({content}){
     const serviceNamesArray = content.map((item) => (item.serviceName))
 
     
-    
     return(
             <>
 
@@ -56,7 +55,6 @@ export default function ContentSwitcher({content}){
                         </div>
                     </motion.div>
                     </AnimatePresence>
-                    {/*<div className="opacity-0 sm:opacity-0 w-screen h-96 bg-black absolute top-0 right-0 z-10"></div>*/}
 
 
                     <AnimatePresence mode="wait">

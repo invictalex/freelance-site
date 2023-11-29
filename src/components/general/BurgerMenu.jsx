@@ -23,15 +23,15 @@ export default function BurerMenu(){
                 initial={{opacity: 0}}
                 className="fixed top-0 left-0 w-full h-screen flex justify-center items-center bg-slate-dark"
             >
-                <motion.div 
+                <motion.ul 
                     className="flex flex-col gap-5 items-center"
                     animate={{x:0}}
                     initial={{x:35}}
                 >
-                    <a href="/" className="text-white text-lg">home</a>
-                    <a href="/services" className="text-white text-lg ">services</a>
-                    <a href="/contact" className="text-lg px-4 pb-1 pt-[0.1rem] text-black bg-blue rounded-full">get started</a>
-                </motion.div>
+                    <li><a href="/" className="text-white text-lg">home</a></li>
+                    <li><a href="/services" className="text-white text-lg ">services</a></li>
+                    <li><a href="/contact" className="text-lg px-4 pb-1 pt-[0.1rem] text-black bg-blue rounded-full">get started</a></li>
+                </motion.ul>
             </motion.div>
         )}
         </div>

@@ -7,7 +7,7 @@ export default function ServicesWidget({content}){
         return(
                 <section className="bg-slate-dark text-white ">
                         <div className="container flex flex-col items-center">
-                                <h2 className="space w-full text-left text-4xl font-bold" slot="heading">
+                                <h2 className="text-4xl space w-full text-left" slot="heading">
                                         {heading}
                                 </h2>
 

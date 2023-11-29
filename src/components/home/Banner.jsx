@@ -18,7 +18,7 @@ export default function Banner({content}){
     const infoList = info.map((item, i) =>{
         return (
             <li key={i}
-                className="text-xl"
+                className="max-lg:text-2xl  text-xl"
             >
                 {item}
                 <img src={icons[i]} alt="" className="w-6 h-6 inline-block ml-4" />
@@ -27,23 +27,23 @@ export default function Banner({content}){
     } )
 
     return(
-        <section className="h-[calc(100vh-5rem)] text-white overflow-hidden">
+        <div className="h-[calc(100vh-5rem)] text-white overflow-hidden">
 
-            <div className="container h-full sm:flex sm:gap-10md:items-center">
+            <div className="container h-full flex sm:gap-10md:items-center">
 
-                <div className="basis-1/2 flex flex-col gap-10 justify-center relative z-10">
+                <div className="md:max-lg:mt-10 md:max-lg:basis-2/3 lg:basis-1/2 flex flex-col gap-10 justify-center relative z-10">
 
-                    <h1 className="font-bold text-5xl text-blue">
+                    <h1 className="md:max-lg:text-6xl font-bold text-5xl text-blue">
                         {headline}
                     </h1>
 
                     <div className="h-2 w-[60%] bg-red" />
 
-                    <ul className="max-sm:hidden space-y-6 md:w-[65%] min-w-[200px]">
+                    <ul className="max-sm:hidden space-y-6 max-md:w-96 md:w-[65%] min-w-[200px]">
                         {infoList}
                     </ul>
                     
-                    <ul className="sm:hidden space-y-6 w-[65%] min-w-[200px]">
+                    <ul className="sm:hidden space-y-6 max-md:w-44  w-[65%]  h-40">
                         <AnimatePresence mode="wait">
                             <motion.li  
                                 key={displayItem}
@@ -62,15 +62,15 @@ export default function Banner({content}){
 
                 </div>
 
-                <div className="max-lg:absolute max-lg:-right-20 max-lg:-bottom-40 basis-1/2 flex justify-center items-center" >
+                <div className="lg:basis-1/2 lg:flex lg:justify-center lg:items-center" >
                     <div
-                        className="w-96 h-96 bg-cover" 
+                        className="absolute bg-cover w-[20rem] h-[20rem] bottom-0 -right-20 md:w-[35rem] md:h-[35rem] md:-bottom-40 lg:static lg:w-96 lg:h-96 " 
                         style={{backgroundImage: `url(${image})`}}>
 
                     </div>
                 </div>
             </div>
 
-        </section>
+        </div>
     )
 }

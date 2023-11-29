@@ -41,7 +41,7 @@ export default function ComparisonTable({content}){
         <section className="text-white">
             <div className="container">
 
-                <h2 className="text-4xl font-bold mb-5">
+                <h2 className="text-4xl mb-5">
                     {headline}
                 </h2>
 
