@@ -1,6 +1,6 @@
 import { useState } from "react"
 import {motion} from "framer-motion"
-
+import rightArrow from "/src/images/rightArrow.svg"
 export default function PromptButton(){
 
     const [hovered, setHovered] = useState(false)
@@ -23,7 +23,7 @@ export default function PromptButton(){
                     {hovered &&  <motion.img id="arrow"
                         initial={{opacity: 0, width: 0}}
                         animate={{opacity: 0.7, width: "1.5rem"}}
-                        src="/src/images/rightArrow.svg"
+                        src={rightArrow.src}
                         className="w-6 ml-2 inline" 
                         transition={{duration: 0.2}}
 
