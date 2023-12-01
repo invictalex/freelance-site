@@ -1,7 +1,7 @@
 ---
 title: Digital Branding
 displayNumber: 1
-image: /src/images/uploads/branding.svg
+image: /uploads/branding.svg
 ---
 ### Heading
 

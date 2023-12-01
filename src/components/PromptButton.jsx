@@ -18,7 +18,7 @@ export default function PromptButton(){
                         className=" text-xl text-black font-semibold inline duration-200 ml-9"
                         style={{marginLeft: hovered ? "2.5rem" : "1.8rem"}}
                     >
-                        Get Started
+                        <a href="/contact">Get Started</a>
                     </h6>
                     {hovered &&  <motion.img id="arrow"
                         initial={{opacity: 0, width: 0}}

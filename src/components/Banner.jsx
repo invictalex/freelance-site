@@ -5,7 +5,8 @@ import bolt from "/src/images/bolt.svg"
 import location from "/src/images/location.svg"
 
 export default function Banner({content}){
-    const icons = [laptop, bolt , location]
+    
+    const icons = [laptop.src, bolt.src, location.src]
 
     const {info, headline, image} = content
 
@@ -24,7 +25,7 @@ export default function Banner({content}){
                 className="max-lg:text-2xl  text-xl"
             >
                 {item}
-                <img src={icons[i].src} alt="" className="w-6 h-6 inline-block ml-4" />
+                <img src={icons[i]} alt="icons" className="w-6 h-6 inline-block ml-4" />
             </li>
         )
     } )

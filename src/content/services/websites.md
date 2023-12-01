@@ -1,7 +1,7 @@
 ---
 title: Websites
 displayNumber: 2
-image: /src/images/uploads/website.svg
+image: /uploads/website.svg
 ---
 ### Heading
 
