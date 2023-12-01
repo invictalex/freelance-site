@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: ./index.astro
+layout: ../../pages/index.astro
 banner:
   headline: Hi. I'm Alex, a digital designer.
   image: /images/uploads/home.svg

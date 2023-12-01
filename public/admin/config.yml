@@ -20,14 +20,14 @@ collections:
     files:
       - label: Logos
         name: logos
-        file: "/src/content/assets.md"
+        file: "/src/content/layout/assets.md"
         fields: 
           - {label: Header Logo, name: headerLogo, widget: image}
           - {label: Footer Logo, name: footerLogo, widget: image}
 
       - label: Contact Prompt
         name: contactPrompt
-        file: "/src/content/prompt.md"
+        file: "/src/content/components/prompt.md"
         fields:
           - {label: Headline, name: headline, widget: string}
           - {label: Text, name: text, widget: string}
@@ -59,10 +59,10 @@ collections:
 
       - label: Home
         name: home
-        file: "/src/pages/index.md"
+        file: "/src/content/pages/index.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Layout, name: layout, widget: hidden, default: ../index.astro*}
+          - {label: Layout, name: layout, widget: hidden, default: ../../pages/index.astro*}
 
 
           - label: Banner
@@ -115,10 +115,10 @@ collections:
 
       - name: services
         label: Services
-        file: "/src/pages/services.md"
+        file: "/src/content/pages/services.md"
         fields: 
           - {label: Title, name: title, widget: string}
-          - {label: Layout, name: layout, widget: hidden, default: ../services.astro*}
+          - {label: Layout, name: layout, widget: hidden, default: "../../pages/services.astro"}
           - label: Service
             name: service
             widget: list
@@ -140,10 +140,10 @@ collections:
 
       - name: contact
         label: Contact
-        file: "/src/pages/contact.md"
+        file: "/src/content/pages/contact.md"
         fields: 
           - {label: Title, name: title, widget: string}
-          - {label: Layout, name: layout, widget: hidden, default: ../contact.astro*}
+          - {label: Layout, name: layout, widget: hidden, default: ../../pages/contact.astro*}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
           - label: Timeline Item
@@ -153,8 +153,6 @@ collections:
             fields:
               - {label: Item, name: item, widget: string}
               
-
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: Services
-layout: ./services.astro
+layout: ../../pages/services.astro
 service:
   - serviceName: Digital Branding
     displayNumber: 1
