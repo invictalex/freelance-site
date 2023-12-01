@@ -1,10 +1,10 @@
-local_backend: true
+#local_backend: true
 
 backend:
-  #name: git-gateway
-  name: proxy
+  name: git-gateway
+  #name: proxy
   branch: main
-  proxy_url: http://localhost:8081/api/v1
+  #proxy_url: http://localhost:8081/api/v1
 
 publish_mode: editorial_workflow
 
