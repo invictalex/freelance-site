@@ -20,7 +20,7 @@ collections:
     files:
       - label: Logos
         name: logos
-        file: "/src/content/layout/assets.md"
+        file: "/src/content/general/assets.md"
         fields: 
           - {label: Header Logo, name: headerLogo, widget: image}
           - {label: Footer Logo, name: footerLogo, widget: image}

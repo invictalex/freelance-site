@@ -1,4 +1,4 @@
 ---
-headerLogo: /src/images/uploads/logo.svg
-footerLogo: /src/images/uploads/logo.svg
+headerLogo: /uploads/logo.svg
+footerLogo: /uploads/logo.svg
 ---
