@@ -2,7 +2,7 @@
 title: Home
 layout: /src/pages/index.astro
 banner:
-  headline: Hi. I'm Alex, a digital designer.
+  headline: Hi. I'm Alex, a digital designer.Woo
   image: /src/images/uploads/home.svg
   info:
     - I craft engaging, user-centric websites, apps and brands
