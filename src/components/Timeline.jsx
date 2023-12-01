@@ -1,7 +1,7 @@
 import { useRef } from "react"
 import { motion } from "framer-motion"
-import blueTick from "../../images/blueTick.svg"
-import cube from "../../images/cube.svg"
+import blueTick from "/src/images/blueTick.svg"
+import cube from "/src/images/cube.svg"
 
 export default function Timeline({content}) {
 

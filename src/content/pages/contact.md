@@ -1,6 +1,6 @@
 ---
 title: Get Started
-layout: ../../pages/contact.astro
+layout: /src/pages/contact.astro
 heading: Getting Started
 subheading: Interested in one or more of my services? Scroll the timeline, below
 timelineItem:

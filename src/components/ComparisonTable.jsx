@@ -1,6 +1,5 @@
-import Section from "../general/Section.jsx"
-import tick from "../../images/tick.svg"
-import cross from "../../images/cross.svg"
+import tick from "/src/images/tick.svg"
+import cross from "/src/images/cross.svg"
 
 
 export default function ComparisonTable({content}){
@@ -51,8 +50,6 @@ export default function ComparisonTable({content}){
                     {table}
                 </div>
             </div>
-
-
         </section>
     )
 }

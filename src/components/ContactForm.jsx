@@ -1,11 +1,13 @@
 import { useState } from "react"
+import palette from "/src/images/palette.svg"
+import website from "/src/images/website.svg"
+import content from "/src/images/content.svg"
 
 export default function ContactForm(){
-    var palette = "src/images/palette.svg"
-    var website = "src/images/website.svg"
-    var content = "src/images/content.svg"
-    var close = "src/images/close.svg"
 
+    
+    var inputStyles = "!mt-2 pl-2 w-full border rounded-md border-[240 5.9% 90%] bg-transparent h-10"
+    var checkboxStyles = "w-32 h-24 border-[240 5.9% 90%] border-2 rounded-lg relative flex flex-col justify-center items-center hover:border-gray-300 duration-300"
     
     const [checkboxes, setCheckboxes] = useState({
         branding: false,
@@ -25,9 +27,6 @@ export default function ContactForm(){
         })
 
     }
-
-    var inputStyles = "!mt-2 pl-2 w-full border rounded-md border-[240 5.9% 90%] bg-transparent h-10"
-    var checkboxStyles = "w-32 h-24 border-[240 5.9% 90%] border-2 rounded-lg relative flex flex-col justify-center items-center hover:border-gray-300 duration-300"
 
     return(
 
@@ -74,7 +73,7 @@ export default function ContactForm(){
                             className="cursor-pointer absolute z-20 w-full h-full opacity-0"
                             onChange={handleChange}
                         />
-                        <img src={palette} className="w-6 h-6" />
+                        <img src={palette.src} className="w-6 h-6" />
                         <p className="font-semibold mt-2 text-slate">Branding</p>
                         
                     </label>
@@ -90,7 +89,7 @@ export default function ContactForm(){
                             className="cursor-pointer absolute z-20 w-full h-full opacity-0"
                             onChange={handleChange}
                         />
-                        <img src={website} className="w-6 h-6" />
+                        <img src={website.src} className="w-6 h-6" />
                         <p className="font-semibold mt-2 text-slate">Website</p>
 
                     </label>
@@ -106,7 +105,7 @@ export default function ContactForm(){
                             className="cursor-pointer absolute z-20 w-full h-full opacity-0"
                             onChange={handleChange}
                         />
-                        <img src={content} className="w-6 h-6" />
+                        <img src={content.src} className="w-6 h-6" />
                         <p className="font-semibold mt-2 text-slate">Content</p>
 
                     </label>

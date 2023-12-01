@@ -1,14 +1,9 @@
 import { useState } from "react"
 import {motion} from "framer-motion"
-import rightArrow from "/src/images/rightArrow.svg"
 
 export default function PromptButton(){
 
-
-
     const [hovered, setHovered] = useState(false)
-
-
 
     return(
         <div >

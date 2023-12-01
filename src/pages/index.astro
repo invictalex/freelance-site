@@ -1,10 +1,10 @@
 ---
 import Main from "../layouts/Main.astro";
 import * as content from "../content/pages/index.md"
-import Banner from "../components/home/Banner.jsx"
-import ServicesWidget from "../components/home/ServicesWidget.jsx"
-import ComparisonTable from "../components/home/ComparisonTable.jsx"
-import Prompt from "../components/general/Prompt.astro"
+import Banner from "../components/Banner.jsx"
+import ServicesWidget from "../components/ServicesWidget.jsx"
+import ComparisonTable from "../components/ComparisonTable.jsx"
+import Prompt from "../components/Prompt.astro"
 
 const {title, banner, services, comparisonChart} = content.frontmatter
 ---
@@ -19,8 +19,6 @@ const {title, banner, services, comparisonChart} = content.frontmatter
     />
 
     <ComparisonTable client:visible
-        heading={comparisonChart.headline}
-        workType={comparisonChart.workType}
         content={comparisonChart}
     />
 

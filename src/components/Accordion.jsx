@@ -1,10 +1,8 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
+import downArrow from "/src/images/downArrow.svg"
 
 export default function Accordion({content}){
-
-
-    var downArrow = "/src/images/downArrow.svg"
 
     const initialStatus = content.map(item => 0)
 
@@ -41,7 +39,7 @@ export default function Accordion({content}){
                     {item}
                 </h6>
                 <img 
-                src={downArrow} className="w-7 h-7 duration-150"
+                src={downArrow.src} className="w-7 h-7 duration-150"
                 style={display[i] ? {transform: "rotate(180deg)"} : {transform: "rotate(0deg)"}}
                 />
 

@@ -1,8 +1,11 @@
 import {AnimatePresence, motion} from "framer-motion"
 import { useState } from "react"
+import laptop from "/src/images/laptop.svg"
+import bolt from "/src/images/bolt.svg"
+import location from "/src/images/location.svg"
 
 export default function Banner({content}){
-    const icons = ["/src/images/laptop.svg", "/src/images/bolt.svg", "/src/images/location.svg"]
+    const icons = [laptop, bolt , location]
 
     const {info, headline, image} = content
 
@@ -21,7 +24,7 @@ export default function Banner({content}){
                 className="max-lg:text-2xl  text-xl"
             >
                 {item}
-                <img src={icons[i]} alt="" className="w-6 h-6 inline-block ml-4" />
+                <img src={icons[i].src} alt="" className="w-6 h-6 inline-block ml-4" />
             </li>
         )
     } )

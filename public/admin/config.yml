@@ -8,8 +8,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: public/images/uploads # Media files will be stored in the repo under static/images/uploads
-public_folder: /images/uploads # The src attribute for uploaded media will begin with /images/uploads
+media_folder: /src/images/uploads # Media files will be stored in the repo under static/images/uploads
+public_folder: /src/images/uploads # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
 
@@ -49,6 +49,20 @@ collections:
             fields: 
               - {label: Text to Display, name: displayText, widget: string} 
               - {label: URL, name: url, widget: string} 
+
+#services         
+
+  - name: services
+    label: Services
+    folder: "/src/content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Display Number, name: displayNumber, widget: number}
+      - {label: Image, name: image, widget: image}
+      - {label: Body, name: body, widget: markdown}
+
 
 
   - name: pages
@@ -110,31 +124,6 @@ collections:
                     fields: 
                       - {label: Text, name: text, widget: string}
                       - {label: "Tick", name: "tick", widget: "boolean", default: false}
-
-#services         
-
-      - name: services
-        label: Services
-        file: "/src/content/pages/services.md"
-        fields: 
-          - {label: Title, name: title, widget: string}
-          - {label: Layout, name: layout, widget: hidden, default: "../../pages/services.astro"}
-          - label: Service
-            name: service
-            widget: list
-            allow_add: true
-            fields: 
-              - {label: Service Name, name: serviceName, widget: string}
-              - {label: Display Number, name: displayNumber, widget: number}
-              - {label: Image, name: image, widget: image}
-              - label: Paragraph
-                name: paragraph
-                widget: list
-                allow_add: true
-                fields: 
-                  - {label: Heading, name: heading, widget: string}
-                  - {label: Text, name: text, widget: text}
-
 
 #contact
 

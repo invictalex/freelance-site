@@ -1,7 +1,7 @@
 ---
-import * as assets from "../../content/layout/assets.md"
-import BurgerMenu from "./BurgerMenu.jsx"
-const sliderStyles = "after:block after:w-0 after:h-px after:bg-white after:duration-300 hover:after:w-full"
+import * as assets from "/src/content/general/assets.md"
+import BurgerMenu from "/src/components/general/BurgerMenu.jsx"
+const hoverStyles = "after:block after:w-0 after:h-px after:bg-white after:duration-300 hover:after:w-full"
 
 ---
 
@@ -12,8 +12,8 @@ const sliderStyles = "after:block after:w-0 after:h-px after:bg-white after:dura
 
         <ul id="reg-menu" class="flex items-center gap-5 text-white">
 
-            <li><a href="/" class={sliderStyles}>home</a></li>
-            <li><a href="/services" class={sliderStyles}>services</a></li>
+            <li><a href="/" class={hoverStyles}>home</a></li>
+            <li><a href="/services" class={hoverStyles}>services</a></li>
             <li><a href="/contact" class="px-4 pb-1 pt-[0.1rem] text-black bg-blue rounded-full" >get started</a></li>
         </ul>
             

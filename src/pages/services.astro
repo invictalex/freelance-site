@@ -1,16 +1,17 @@
 ---
 import Main from "../layouts/Main.astro";
-import ContentSwitcher from "../components/services/ContentSwitcher.jsx";
-import * as content from "../content/pages/services.md"
-import Prompt from "../components/general/Prompt.astro";
+import ContentSwitcher from "../components/ContentSwitcher.jsx";
+import Prompt from "../components/Prompt.astro";
+import { getCollection } from "astro:content";
 
-const {title, service} = content.frontmatter
+const services = await getCollection("services")
+
 ---
 
-<Main title={title} footerColor="bg-slate-dark">
+<Main title="services" footerColor="bg-slate-dark">
     <ContentSwitcher 
         client:load
-        content={service}
+        contentTwo={services}
     />
     <Prompt/>
 

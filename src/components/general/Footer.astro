@@ -1,16 +1,12 @@
 ---
-import * as assets from "../../content/layout/assets.md"
-import * as content from "../../content/layout/links.md"
+import * as assets from "/src/content/general/assets.md"
+import * as content from "/src/content/general/links.md"
 
 const {footerLink} = content.frontmatter
-
 const {headerLogo} = assets.frontmatter
-
 const { color } = Astro.props
-
-
-
 ---
+
 <footer class=`${color} text-white`>
     <section class="pt-0">
 

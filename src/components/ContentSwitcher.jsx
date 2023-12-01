@@ -1,17 +1,19 @@
 import  { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
+import Markdown from "react-markdown"
 
 
-export default function ContentSwitcher({content}){
+
+export default function ContentSwitcher({contentTwo}){
 
 
     const backToTop = () => window.scrollTo({ top: 0 })
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const { serviceName, image, paragraph } = content[currentIndex]
+    const { data: {title, displayNumber, image}, body } = contentTwo[currentIndex]
 
-    const serviceNamesArray = content.map((item) => (item.serviceName))
+    const serviceNamesArray = contentTwo.map((item) => (item.data.title))
 
     
     return(
@@ -30,7 +32,7 @@ export default function ContentSwitcher({content}){
                     >
                         <h5 className="text-4xl font-semibold">Services</h5>
                         <div className="h-1 w-[150px] bg-red" />
-                        <h1 className="text-6xl font-bold text-blue max-sm:text-5xl">{serviceName}</h1>
+                        <h1 className="text-6xl font-bold text-blue max-sm:text-5xl">{title}</h1>
                         <p>
                             {serviceNamesArray.map((item, i) => (
                                 <span 
@@ -95,14 +97,10 @@ export default function ContentSwitcher({content}){
                             exit={{opacity: 0}}
                             transition={{ease: "linear", duration:0.2}}
                         >
-                            {paragraph.map((para, i) => (
-                                <div  
-                                    key={i}
-                                >
-                                    <h4>{para.heading}</h4>
-                                    <p>{para.text}</p>
-                                </div>
-                            ))}
+                            <Markdown>
+                            {body}
+
+                            </Markdown>
                             <p className="mr-10 text-right text-lg cursor-pointer font-bold text-purple mt-20" onClick={backToTop}>More services</p>
                         </motion.div>
                     </AnimatePresence>

@@ -2,8 +2,10 @@
 import Header from "../components/general/Header.astro";
 import Footer from "../components/general/Footer.astro"
 import GlobalStyles from "../style/GlobalStyles.astro"
+
 interface Props {
 	title: string;
+	footerColor: string
 }
 
 const { title, footerColor } = Astro.props;
@@ -15,14 +17,13 @@ const { title, footerColor } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/src/images/logoDark.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body class="bg-slate">
 
 		<Header />
-		
 			<div class={`h-20 w-full bg-slate`} />
 
 			<slot />
@@ -34,4 +35,3 @@ const { title, footerColor } = Astro.props;
 	
 
 </html>
-

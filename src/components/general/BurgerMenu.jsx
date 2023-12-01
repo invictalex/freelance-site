@@ -4,8 +4,6 @@ import {useState} from "react"
 export default function BurerMenu(){
 
     const prongStyle = "block h-0.5 w-8 bg-white"
-    const linkStyle = "text-white"
-
     
     const [menuTray, setMenuTray] = useState(false)
 
