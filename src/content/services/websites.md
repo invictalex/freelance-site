@@ -19,7 +19,7 @@ Undoubtedly the biggest drawback of “web-builders” like WordPress, Squarespa
 
 React is a state-of-the-art web development tool, created by Facebook, that allows users to change what information they see interactively without ever having to leave the page. This is useful for many reasons; the interactivity keeps your content interesting; it prevents overwhelming users with too many pages; and it allows users to browse content faster - all of which prevent the loss of website traffic. All sounding a bit technical? Take a look at some of the companies currently using react:
 
-**{Netflix, AirBnB, Facebook, Uber}**
+![Companies that use React](/uploads/companies-using-react.png)
 
 **You’re in good company.** 
 
