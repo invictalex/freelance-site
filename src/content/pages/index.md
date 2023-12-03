@@ -11,10 +11,10 @@ banner:
 services:
   heading: Browse my services
   service:
-    - item: Digital Branding
-      description: Brand colours, logos, and everything in-between
-    - item: Websites
-      description: Designed, developed and delivered to your doorstep
+    - item: Branding & Design
+      description: Brand colour palettes, logos, and website design
+    - item: Website Development
+      description: Hand-coded, fast, customisable and interactive.
     - item: Content Management
       description: Keeping your website content up-to-date and search engine optimised
 comparisonChart:
