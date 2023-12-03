@@ -1,5 +1,5 @@
 ---
-title: Digital Branding
+title: Branding & Design
 displayNumber: 1
 image: /uploads/branding.svg
 ---
