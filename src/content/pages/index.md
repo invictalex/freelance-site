@@ -5,16 +5,16 @@ banner:
   headline: Hi. I'm Alex, a digital designer.
   image: /uploads/home.svg
   info:
-    - I craft engaging, user-centric websites, apps and brands
-    - Using the industry's fastest technologies
+    - I design engaging, user-centric brands and websites
+    - I develop websites using cutting-edge technologies
     - Based in London, servicing the UK
 services:
   heading: Browse my services
   service:
-    - item: Digital Branding
-      description: Brand colours, logos, and everything in-between
-    - item: Websites
-      description: Designed, developed and delivered to your doorstep
+    - item: Branding & Design
+      description: Brand colour palettes, logos, and website design
+    - item: Website Development
+      description: Hand-coded, fast, customisable and interactive.
     - item: Content Management
       description: Keeping your website content up-to-date and search engine optimised
 comparisonChart:
