@@ -33,10 +33,10 @@ export default function Banner({content}){
     return(
         <div className="h-[calc(100vh-5rem)] text-white overflow-hidden">
 
-            <div className="container h-full flex sm:gap-10md:items-center">
+            <div className="container h-full flex sm:gap-10 max-md:items-start max-md:mt-10">
 
                 <motion.div 
-                    className="md:max-lg:mt-10 md:max-lg:basis-2/3 lg:basis-1/2 flex flex-col gap-10 justify-center relative z-10"
+                    className="md:max-lg:mt-10 md:max-lg:basis-2/3 lg:basis-1/2 flex flex-col gap-10 max-md:gap-6 justify-center relative z-10"
                     initial={{opacity:0, y: 100}}
                     animate={{opacity:1, y:0}}
                     transition={{duration:1, type:"spring"}}
