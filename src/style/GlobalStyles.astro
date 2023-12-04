@@ -1,53 +1,40 @@
 <style is:global>
 
-    h4{
-        font-size: 1.8rem;
-        font-weight:600;
-        margin-block:2rem 
-    }
 
-    .scrollbar-hide::-webkit-scrollbar {
+.scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
 
-/* For IE, Edge and Firefox */
 .scrollbar-hide {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
     
-    section {
-        width: 100%; 
-        padding-top: 6rem;
-        padding-bottom: 8rem;
-        position: relative;
+section {
+    width: 100%; 
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+    position: relative;
 
-    }
-
-    .container{
-        width: 100%;
-        max-width: 80rem; 
-        padding-inline: 1.25rem;
-        margin-inline: auto;
-        position: relative;
-    }
-
-    .space{
-        margin-bottom: 6rem;
-    }
-
-
-    @media (max-width: 1000px){
-    #reg-menu{
-        display:none;
-    }
-    #burger-menu{
-        display: block;
-    }
 }
 
+.container{
+    width: 100%;
+    max-width: 80rem; 
+    padding-inline: 1.25rem;
+    margin-inline: auto;
+    position: relative;
+}
+
+.space{
+    margin-bottom: 6rem;
+}
+
+
+
 html{
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    font-size:17px
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -55,14 +42,36 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
-h1 {    font-size: 3.75rem  }   /*text-6xl*/
-h2 {    font-size: 3rem  }      /*text-5xl*/
-h3 {    font-size: 2.25rem  }   /*text-4xl*/
-h4 {    font-size: 1.875rem  }  /*text-3xl*/
-h5 {    font-size: 1.5rem  }    /*text-2xl*/
-h6 {    font-size: 1.25rem  }    /*text-xl*/
+h1 {    font-size: 3.75rem; line-height: 1;  }   /*text-6xl*/
+h2 {    font-size: 3rem; line-height: 1;  }      /*text-5xl*/
+h3 {    font-size: 2.25rem; line-height: 2.5rem  }   /*text-4xl*/
+h4 {    font-size: 1.875rem; line-height: 2.25rem  }  /*text-3xl*/
+h5 {    font-size: 1.5rem; line-height: 2rem;  }    /*text-2xl*/
+h6 {    font-size: 1.25rem; line-height: 1.75rem;  }    /*text-xl*/
 
+p, li {     font-size: 17px;}
 
+.markdown h2{
+    color: #292B30;
+    font-size: 2.25rem;
+    margin-top: 3rem;
+    margin-bottom: 1.3rem
+}
+
+.markdown h2:first-of-type{
+    margin-top: 0
+}
+
+.markdown h6{
+    color: #404a5d;
+    font-size: 1.1rem;
+    margin-block: 1.3rem
+}
+
+.markdown p{
+    color: black;
+    margin-block: 1rem
+}
 
 
 

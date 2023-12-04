@@ -47,9 +47,9 @@ export default function ComparisonTable({content}){
                 viewport={{ once: true }}
             >
 
-                <h2 className="text-4xl mb-5">
+                <h3 className="text-4xl mb-5">
                     {headline}
-                </h2>
+                </h3>
 
                 <div className="space h-2 rounded-xs w-[200px] bg-red"></div>
 

@@ -15,9 +15,9 @@ export default function ServicesWidget({content}){
                                 viewport={{ once: true }}
         
                         >
-                                <h2 className="text-4xl space w-full text-left" slot="heading">
+                                <h3 className="space w-full text-left" slot="heading">
                                         {heading}
-                                </h2>
+                                </h3>
 
                                 <div className="py-16">
                                         <Accordion content={service}/>

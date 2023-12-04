@@ -1,14 +1,14 @@
 import { motion } from "framer-motion"
 import {useState} from "react"
 
-export default function BurerMenu(){
+export default function BurgerMenu(){
 
     const prongStyle = "block h-0.5 w-8 bg-white"
     
     const [menuTray, setMenuTray] = useState(false)
 
     return(
-        <div id="burger-menu" className="relative z-10 hidden">
+        <div className="relative z-10 lg:hidden">
             <div className="z-100 space-y-1.5 hover:cursor-pointer relative z-10" onClick={() => setMenuTray(prev => !prev)}>
                 <motion.span animate={menuTray ? {rotateZ: 45, y: 8} : {rotateZ: 0, y: 0}} className={prongStyle}></motion.span>
                 <motion.span animate={{width: menuTray ? 0 : 24}} className={prongStyle}></motion.span>

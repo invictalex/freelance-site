@@ -30,9 +30,9 @@ export default function ContentSwitcher({contentTwo}){
                         exit={{opacity: 0,  x: -100}}
                         transition={{ease: "linear", duration:0.2}}
                     >
-                        <h5 className="text-4xl font-semibold">Services</h5>
+                        <h3 className="font-semibold">Services</h3>
                         <div className="h-1 w-[150px] bg-red" />
-                        <h1 className="text-6xl font-bold text-blue max-sm:text-5xl">{title}</h1>
+                        <h1 className="font-bold text-blue max-sm:text-5xl">{title}</h1>
                         <p>
                             {serviceNamesArray.map((item, i) => (
                                 <span 
@@ -90,7 +90,7 @@ export default function ContentSwitcher({contentTwo}){
 
                     <AnimatePresence mode="wait">
                         <motion.div
-                            className="container"
+                            className="container markdown"
                             key={currentIndex}
                             initial={{opacity: 0}}
                             animate={{opacity: 1}}
@@ -98,10 +98,12 @@ export default function ContentSwitcher({contentTwo}){
                             transition={{ease: "linear", duration:0.2}}
                         >
                             <Markdown>
-                            {body}
+                                {body}
 
                             </Markdown>
-                            <p className="mr-10 text-right text-lg cursor-pointer font-bold text-purple mt-20" onClick={backToTop}>More services</p>
+                            <p className="mr-10 text-right text-lg font-bold text-purple mt-20" >
+                                <span onClick={backToTop} className="cursor-pointer">More services</span>
+                            </p>
                         </motion.div>
                     </AnimatePresence>
 
