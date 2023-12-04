@@ -31,7 +31,7 @@ export default function Banner({content}){
     } )
 
     return(
-        <div className="h-[calc(100vh-5rem)] text-white overflow-hidden">
+        <div className="text-white overflow-hidden" style={{minHeight: "-webkit-fill-available"}}>
 
             <div className="container h-full flex sm:gap-10 max-md:items-start max-md:mt-10">
 
