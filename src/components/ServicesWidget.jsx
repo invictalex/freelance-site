@@ -1,4 +1,5 @@
 import Accordion from "./Accordion.jsx"
+import {motion} from "framer-motion"
 
 export default function ServicesWidget({content}){
 
@@ -6,7 +7,14 @@ export default function ServicesWidget({content}){
         
         return(
                 <section className="bg-slate-dark text-white ">
-                        <div className="container flex flex-col items-center">
+                        <motion.div 
+                                className="container flex flex-col items-center"
+                                initial={{opacity:0, y: 100 }}
+                                whileInView={{opacity:1, y:0}}
+                                transition={{duration:1, type:"spring", delay:0.2}}
+                                viewport={{ once: true }}
+        
+                        >
                                 <h2 className="text-4xl space w-full text-left" slot="heading">
                                         {heading}
                                 </h2>
@@ -18,7 +26,7 @@ export default function ServicesWidget({content}){
 
                                 <button className="text-center py-2 px-4 bg-blue text-black text-lg font-semibold rounded-full hover:bg-white duration-200 "><a href="/services">Services Hub</a></button>
                 
-                        </div>
+                        </motion.div>
                        
   
                 </section>

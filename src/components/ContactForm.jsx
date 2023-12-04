@@ -1,4 +1,5 @@
 import { useState } from "react"
+import {motion} from "framer-motion"
 import palette from "/src/images/palette.svg"
 import website from "/src/images/website.svg"
 import content from "/src/images/content.svg"
@@ -30,7 +31,13 @@ export default function ContactForm(){
 
     return(
 
-        <div className="w-full max-w-md bg-white flex justify-center px-5 py-8 rounded-lg border relative ">
+        <motion.div 
+            className="w-full max-w-md bg-white flex justify-center px-5 py-8 rounded-lg border relative"
+            initial={{opacity:0, y: 100}}
+            animate={{opacity:1, y:0}}
+            transition={{duration:1, type:"spring"}}
+            
+            >
             <form 
                 className="flex flex-col items-start justify-start w-full space-y-5" 
                 name="contact" 
@@ -125,6 +132,6 @@ export default function ContactForm(){
                     Send
                 </button>
             </form>
-        </div>
+        </motion.div>
     )
 }

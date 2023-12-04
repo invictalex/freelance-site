@@ -9,7 +9,12 @@ export default function Timeline({content}) {
      
 
     const timeline = content.map(({item}, i) => (
-        <div className="flex items-center z-10 relative" key={i}>
+        <motion.div 
+            className="flex items-center z-10 relative" key={i}
+            initial={{opacity:0, y: 100}}
+            animate={{opacity:1, y:0}}
+            transition={{duration:1, type:"spring"}}
+        >
             
             <motion.div
                 className="w-9 h-9 z-20 bg-cover mr-8"
@@ -29,7 +34,7 @@ export default function Timeline({content}) {
             >
                 {item}
             </motion.li>
-        </div>
+        </motion.div>
         
     ))
 

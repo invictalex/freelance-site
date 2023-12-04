@@ -35,7 +35,12 @@ export default function Banner({content}){
 
             <div className="container h-full flex sm:gap-10md:items-center">
 
-                <div className="md:max-lg:mt-10 md:max-lg:basis-2/3 lg:basis-1/2 flex flex-col gap-10 justify-center relative z-10">
+                <motion.div 
+                    className="md:max-lg:mt-10 md:max-lg:basis-2/3 lg:basis-1/2 flex flex-col gap-10 justify-center relative z-10"
+                    initial={{opacity:0, y: 100}}
+                    animate={{opacity:1, y:0}}
+                    transition={{duration:1, type:"spring"}}
+                >
 
                     <h1 className="md:max-lg:text-6xl font-bold text-5xl text-blue">
                         {headline}
@@ -64,15 +69,21 @@ export default function Banner({content}){
                         </AnimatePresence>
                     </ul>
 
-                </div>
+                </motion.div>
 
-                <div className="lg:basis-1/2 lg:flex lg:justify-center lg:items-center" >
+                <motion.div 
+                className="lg:basis-1/2 lg:flex lg:justify-center lg:items-center" 
+                initial={{opacity:0, y: 100}}
+                animate={{opacity:1, y:0}}
+                transition={{duration:1, type:"spring"}}
+                
+                >
                     <div
                         className="absolute bg-cover w-[20rem] h-[20rem] bottom-0 -right-20 md:w-[35rem] md:h-[35rem] md:-bottom-40 lg:static lg:w-96 lg:h-96 " 
                         style={{backgroundImage: `url(${image})`}}>
 
                     </div>
-                </div>
+                </motion.div>
             </div>
 
         </div>

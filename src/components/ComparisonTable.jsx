@@ -1,5 +1,6 @@
 import tick from "/src/images/tick.svg"
 import cross from "/src/images/cross.svg"
+import {motion} from "framer-motion"
 
 
 export default function ComparisonTable({content}){
@@ -38,7 +39,13 @@ export default function ComparisonTable({content}){
 
     return(
         <section className="text-white">
-            <div className="container">
+            <motion.div 
+                className="container"
+                initial={{opacity:0, y: 100 }}
+                whileInView={{opacity:1, y:0}}
+                transition={{duration:1, type:"spring", delay:0.2}}
+                viewport={{ once: true }}
+            >
 
                 <h2 className="text-4xl mb-5">
                     {headline}
@@ -49,7 +56,7 @@ export default function ComparisonTable({content}){
                 <div className="flex gap-5 justify-center max-lg:flex-col max-lg:items-center">
                     {table}
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }
