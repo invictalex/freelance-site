@@ -35,7 +35,7 @@ export default function ContactForm(){
                 <h1 className="font-bold text-2xl text-slate text-start">
                     Get in touch
                 </h1>
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="contact" value="contact" />
 
                 <p className="text-slate opacity-60">
                     Fill out this quick form and I'll be in touch shortly
