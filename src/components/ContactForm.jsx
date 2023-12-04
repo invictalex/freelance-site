@@ -6,7 +6,7 @@ import content from "/src/images/content.svg"
 export default function ContactForm(){
 
     
-    var inputStyles = "!mt-2 pl-2 w-full border rounded-md border-[240 5.9% 90%] bg-transparent h-10"
+    var inputStyles = "!mt-2 pl-2 w-full border rounded-md border-[240 5.9% 90%] bg-transparent h-10 text-black"
     var checkboxStyles = "w-32 h-24 border-[240 5.9% 90%] border-2 rounded-lg relative flex flex-col justify-center items-center hover:border-gray-300 duration-300"
     
     const [checkboxes, setCheckboxes] = useState({
@@ -31,7 +31,14 @@ export default function ContactForm(){
     return(
 
         <div className="w-full max-w-md bg-white flex justify-center px-5 py-8 rounded-lg border relative ">
-            <form className="flex flex-col items-start justify-start w-full space-y-5" name="contact" data-netlify="true" data-netlify-honeypot="bot-field" method="post">
+            <form 
+                className="flex flex-col items-start justify-start w-full space-y-5" 
+                name="contact" 
+                data-netlify="true" 
+                data-netlify-honeypot="bot-field" 
+                method="post"
+                action="/success/"
+            >
                 <h1 className="font-bold text-2xl text-slate text-start">
                     Get in touch
                 </h1>
