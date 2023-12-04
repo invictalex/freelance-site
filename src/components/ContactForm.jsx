@@ -112,7 +112,7 @@ export default function ContactForm(){
                     
                 </div>
                 
-                <button className="w-full py-1 px-5 bg-slate text-white font-semibold rounded-lg h-10 mt-20
+                <button type="submit" className="w-full py-1 px-5 bg-slate text-white font-semibold rounded-lg h-10 mt-20
                 hover:bg-black duration-200">
                     Send
                 </button>
