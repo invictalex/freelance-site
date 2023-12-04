@@ -31,14 +31,7 @@ const { title, footerColor } = Astro.props;
 			<slot />
 		<Footer color={footerColor}/>
 
-		<!-- A little help for the Netlify post-processing bots -->
-		<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-			<input type="text" name="name" />
-			<input type="email" name="email" />
-			<input type="checkbox" name="branding" />
-			<input type="checkbox" name="website" />
-			<input type="checkbox" name="content" />
-		</form>
+
 		
 		<script>
 			if (window.netlifyIdentity) {
