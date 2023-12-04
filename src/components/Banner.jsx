@@ -31,15 +31,17 @@ export default function Banner({content}){
     } )
 
     return(
-        <div className="text-white overflow-hidden" style={{minHeight: "-webkit-fill-available"}}>
+        <div className="text-white overflow-hidden" style={{minHeight: "-webkit-fill-available", height:"100vh"}}>
 
-            <div className="container h-full flex sm:gap-10 max-md:items-start max-md:mt-10">
+            <motion.div className="container h-full flex sm:gap-10 max-md:items-start max-md:mt-10"
+            initial={{opacity:0, y: 100}}
+            animate={{opacity:1, y:0}}
+            transition={{duration:1, type:"spring"}}
+            >
 
-                <motion.div 
+                <div 
                     className="md:max-lg:mt-10 md:max-lg:basis-2/3 lg:basis-1/2 flex flex-col gap-10 max-md:gap-6 justify-center relative z-10"
-                    initial={{opacity:0, y: 100}}
-                    animate={{opacity:1, y:0}}
-                    transition={{duration:1, type:"spring"}}
+                    
                 >
 
                     <h1 className="md:max-lg:text-6xl font-bold text-5xl text-blue">
@@ -69,13 +71,10 @@ export default function Banner({content}){
                         </AnimatePresence>
                     </ul>
 
-                </motion.div>
+                </div>
 
-                <motion.div 
+                <div 
                 className="lg:basis-1/2 lg:flex lg:justify-center lg:items-center" 
-                initial={{opacity:0, y: 100}}
-                animate={{opacity:1, y:0}}
-                transition={{duration:1, type:"spring"}}
                 
                 >
                     <div
@@ -83,8 +82,8 @@ export default function Banner({content}){
                         style={{backgroundImage: `url(${image})`}}>
 
                     </div>
-                </motion.div>
-            </div>
+                </div>
+            </motion.div>
 
         </div>
     )
