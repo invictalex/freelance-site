@@ -31,7 +31,7 @@ export default function ContactForm(){
     return(
 
         <div className="w-full max-w-md bg-white flex justify-center px-5 py-8 rounded-lg border relative ">
-            <form className="flex flex-col items-start justify-start w-full space-y-5" netlify>
+            <form className="flex flex-col items-start justify-start w-full space-y-5" netlify name="contact" method="POST">
                 <h1 className="font-bold text-2xl text-slate text-start">
                     Get in touch
                 </h1>
