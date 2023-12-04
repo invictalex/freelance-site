@@ -3,16 +3,6 @@ title: Website Development
 displayNumber: 2
 image: /uploads/website.svg
 ---
-### Why I don’t recommend Wordpress or Squarespace
-
-###### Web-builders rarely deliver secure, fast and highly interactive solutions
-
-WordPress sites make up almost half of all websites ever, marking its significance in the history of the internet. Being 20 years old, out-of-the-box WordPress sites fall short- they are not optimised for search engines (SEO) and they’re prone to information hacks (they made up 94% of all successful cyberattacks in 2019). WordPress developers tackle these shortfalls using plugins - there are over 59,000 plugins to choose from - crazy right? Plugins cost money, make your website run slower, and require an abundance of research.
-
-Squarespace has emerged as a popular, design-focused solution. Users can choose from a library of attractive themes and will be guaranteed a website that looks nice. Their sites are more secure and SEO friendly. Unfortunately, having themes at the click of a button means your website has to lug around lots of unused code, and in turn, results in notoriously slow load-times. Don’t just take my word for it - explore this PageSpeed report for this stylish Squarespace site - a shocking 49/100 performance rating.
-
-Undoubtedly the biggest drawback of “web-builders” like WordPress, Squarespace and Wix is that they are not mobile friendly. If a user wants to browse the sections of your site, they have to reload each new page, creating a clunky user experience familiar to us all. You might want to update information dynamically - take this site for instance where you can switch between Services without having to reload - this wouldn’t be possible using a web-builder. In a world where device users demand a seamless experience, this feature is a necessity.
-
 ### How I develop websites
 
 ###### **My websites are hand-coded using powerful modern tools like React and Astro. Read on to learn about how these tools will make your website better**
