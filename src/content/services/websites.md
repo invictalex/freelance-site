@@ -3,7 +3,7 @@ title: Website Development
 displayNumber: 2
 image: /uploads/website.svg
 ---
-#### Why I don’t recommend Wordpress or Squarespace
+### Why I don’t recommend Wordpress or Squarespace
 
 ###### Web-builders rarely deliver secure, fast and highly interactive solutions
 
@@ -13,7 +13,7 @@ Squarespace has emerged as a popular, design-focused solution. Users can choose 
 
 Undoubtedly the biggest drawback of “web-builders” like WordPress, Squarespace and Wix is that they are not mobile friendly. If a user wants to browse the sections of your site, they have to reload each new page, creating a clunky user experience familiar to us all. You might want to update information dynamically - take this site for instance where you can switch between Services without having to reload - this wouldn’t be possible using a web-builder. In a world where device users demand a seamless experience, this feature is a necessity.
 
-#### How I develop websites
+### How I develop websites
 
 ###### **My websites are hand-coded using powerful modern tools like React and Astro. Read on to learn about how these tools will make your website better**
 
