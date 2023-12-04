@@ -3,7 +3,7 @@ title: Branding & Design
 displayNumber: 1
 image: /uploads/branding.svg
 ---
-## Choosing your colours
+### Choosing your colours
 
 ###### A company’s colours are at the epicentre of its identity. Having the right colour palette transforms you from a business into an authentic brand.
 
@@ -11,7 +11,7 @@ You’ll probably notice that certain industries lean toward certain colourways.
 
 Choosing a colour palette for your website is a slightly different process, and though you will likely use your brand’s core colours somewhat, there’s plenty else to consider here. In fact, UI (user interface) designers like myself draw from an extensive Color Theory when designing a prototype. For instance, I tend to work with only a small handful of highly saturated colours (like the purple and rose-red used here) in part so that they stand out, but also to avoid overwhelming the user. When picking out these primary, secondary and tertiary colours, I test their compatibility using savvy tools like [Contrast Grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23F2F2F2%0D%0A%23DDDDDD%0D%0A%23CCCCCC%0D%0A%23888888%0D%0A%23404040%2C%20Charcoal%0D%0A%23000000%2C%20Black%0D%0A%232F78C5%2C%20Effective%20on%20Extremes%0D%0A%230F60B6%2C%20Effective%20on%20Lights%0D%0A%23398EEA%2C%20Ineffective%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp). If you’d like to learn more about Color Theory, check out this [article](https://www.toptal.com/designers/ui/ui-color-guide).
 
-## Designing your logo
+### Designing your logo
 
 ###### Creating a fitting logo is one of the most important steps in evolving a brand identity and ultimately increasing your clicks, reach and customer base.
 
