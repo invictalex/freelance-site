@@ -35,7 +35,7 @@ export default function Accordion({content}){
             initial={{height: "4rem"}}
         >
             <div className="flex items-center justify-between  my-5">
-                <h6 className="font-semibold group-hover:underline ">
+                <h6 className="font-normal group-hover:underline ">
                     {item}
                 </h6>
                 <img 

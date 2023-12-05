@@ -13,17 +13,17 @@ export default function ContentSwitcher({contentTwo}){
 
     const { data: {title, displayNumber, image}, body } = contentTwo[currentIndex]
 
-    const serviceNamesArray = contentTwo.map((item) => (item.data.title))
+    const serviceNames = contentTwo.map((item) => (item.data.title))
 
     
     return(
             <>
 
-                <div className="container h-96 text-white flex items-end justify-between relative overflowy-hidden overflow-hidden lg:overflow-visible">
+                <div className="container h-[75vh] max-h-[600px] text-white flex items-start mt-10 justify-between relative overflow-hidden sm:h-96 sm:items-end sm:mt-0 lg:overflow-visible">
                     
                     <AnimatePresence mode="wait">
                     <motion.div 
-                        className="w-2/3 sm:w-full flex flex-col gap-5 z-20 "
+                        className="w-5/6 flex flex-col gap-5 z-20 sm:w-2/3 sm:mb-20 lg:w-full "
                         key={currentIndex}
                         initial={{opacity: 0, x: -100}}
                         animate={{opacity: 1, x:0}}
@@ -31,38 +31,27 @@ export default function ContentSwitcher({contentTwo}){
                         transition={{ease: "linear", duration:0.2}}
                     >
                         <h3 className="font-semibold">Services</h3>
-                        <div className="h-1 w-[150px] bg-red" />
+                        <div className="h-[6px] w-[150px] bg-red" />
                         <h1 className="font-bold text-blue max-sm:text-5xl">{title}</h1>
                         <p>
-                            {serviceNamesArray.map((item, i) => (
+                            {serviceNames.map((item, i) => (i != currentIndex &&
                                 <span 
                                     key={i} 
                                     className={`${i !== currentIndex ? "cursor-pointer" : " font-bold cursor-default" } opacity-80 italic`}
                                     onClick={() => setCurrentIndex(i)}
                                 >
-                                    {item} {i !== serviceNamesArray.length -1 && `  |   ` } 
+                                    {item}
+                                    <span className="last-of-type:hidden"> | </span>
                                 </span>
                             ))}
                         </p>
-
-                        <div className="flex gap-5 mb-8 mt-2 sm:mt-12">
-                            {serviceNamesArray.map((item, i) => (
-                                <span 
-                                    key={i} 
-                                    className={`${i === currentIndex ? "bg-red cursor-default" : "cursor-pointer border border-white border-opacity-70"} block h-6 w-6 rounded-full`}
-                                    onClick={() => setCurrentIndex(i)}
-                                >
-                                </span>
-                            ))}
-                        </div>
                     </motion.div>
                     </AnimatePresence>
-
 
                     <AnimatePresence mode="wait">
                         <motion.img 
                             src={image} 
-                            className="w-[30rem] -mb-20 max-lg:w-[20rem] max-lg:mb-0 max-md:-mr-28 max-sm:!opacity-70"
+                            className="absolute -right-20 -bottom-10 w-80 lg:w-[27rem] lg:right-0 lg:-bottom-20 "
                             alt="banner-image"
                             key={currentIndex}
                             initial={{opacity: 0, x: 100}}
@@ -71,8 +60,19 @@ export default function ContentSwitcher({contentTwo}){
                             transition={{ease: "linear", duration:0.2}}
                             
                         />
-                    
                     </AnimatePresence>
+                    
+                    <div className="flex gap-5 absolute bottom-5 left-5 z-20">
+                        {serviceNames.map((item, i) => (
+                            <span 
+                                key={i} 
+                                className={`${i === currentIndex ? "bg-red cursor-default" : "cursor-pointer border border-white border-opacity-70"} block h-6 w-6 rounded-full`}
+                                onClick={() => setCurrentIndex(i)}
+                            >
+                            </span>
+                        ))}
+                    </div>
+
                 </div>
 
                 <AnimatePresence mode="wait">

@@ -14,7 +14,19 @@ const hoverStyles = "after:block after:w-0 after:h-px after:bg-white after:durat
 
             <li><a href="/" class={hoverStyles}>home</a></li>
             <li><a href="/services" class={hoverStyles}>services</a></li>
-            <li><a href="/contact" class="px-4 pb-1 pt-[0.1rem] text-black bg-blue rounded-full" >get started</a></li>
+            <li class=" h-8 mt-2 overflow-hidden">
+                
+                <a href="/contact" class="block overflow-hidden px-4 pb-[3px] pt-[1px]  rounded-full relative group text-black relative z-20 border border-slate hover:border-purple" >
+                    
+                    <span class="h-8 w-64 absolute -right-8 -top-px group-hover:-right-36 duration-300 z-30">
+                        <span class="w-32 h-8 bg-purple -skew-x-12 absolute"/>
+                        <span class="w-28 h-8 bg-blue -skew-x-12  absolute left-28 "/>
+                    </span>
+
+                    <span class="relative z-20 group-hover:text-white z-40">get started</span>
+                    
+                </a>
+            </li>
         </ul>
             
         <BurgerMenu 
