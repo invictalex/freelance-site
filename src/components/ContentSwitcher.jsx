@@ -11,15 +11,24 @@ export default function ContentSwitcher({contentTwo}){
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const { data: {title, displayNumber, image}, body } = contentTwo[currentIndex]
+    contentTwo.sort((a, b) => {
+        return a.data.displayNumber - b.data.displayNumber;
+    })
+
+    const { data: {title, image}, body } = contentTwo[currentIndex]
 
     const serviceNames = contentTwo.map((item) => (item.data.title))
 
+    const newArr = serviceNames.filter((item, i) => {
+        return i !== currentIndex
+    })
+
+    console.log(newArr)
     
     return(
             <>
 
-                <div className="container h-[75vh] max-h-[600px] text-white flex items-start mt-10 justify-between relative overflow-hidden sm:h-96 sm:items-end sm:mt-0 lg:overflow-visible">
+                <div className="container h-[75vh] max-h-[600px] text-white flex items-start mt-8 justify-between relative overflow-hidden sm:h-96 sm:items-end sm:mt-0 lg:overflow-visible">
                     
                     <AnimatePresence mode="wait">
                     <motion.div 
@@ -33,15 +42,16 @@ export default function ContentSwitcher({contentTwo}){
                         <h3 className="font-semibold">Services</h3>
                         <div className="h-[6px] w-[150px] bg-red" />
                         <h1 className="font-bold text-blue max-sm:text-5xl">{title}</h1>
-                        <p>
-                            {serviceNames.map((item, i) => (i != currentIndex &&
+                        <p >
+                            {serviceNames.map((item, i) => (i!== currentIndex &&
                                 <span 
                                     key={i} 
-                                    className={`${i !== currentIndex ? "cursor-pointer" : " font-bold cursor-default" } opacity-80 italic`}
+                                    className="block remainingServices opacity-80 italic hover:opacity-100 cursor-pointer sm:inline"
                                     onClick={() => setCurrentIndex(i)}
                                 >
-                                    {item}
-                                    <span className="last-of-type:hidden"> | </span>
+                                    {item}   
+                                    <span className="divider mx-2">|</span>
+                                    
                                 </span>
                             ))}
                         </p>
@@ -51,7 +61,7 @@ export default function ContentSwitcher({contentTwo}){
                     <AnimatePresence mode="wait">
                         <motion.img 
                             src={image} 
-                            className="absolute -right-20 -bottom-10 w-80 lg:w-[27rem] lg:right-0 lg:-bottom-20 "
+                            className="absolute -right-24 -bottom-16 w-80 lg:w-[27rem] lg:right-0 lg:-bottom-20 "
                             alt="banner-image"
                             key={currentIndex}
                             initial={{opacity: 0, x: 100}}
