@@ -7,9 +7,9 @@ image: /uploads/website.svg
 
 ###### Web-builders suffice in many scenarios, but rarely deliver secure, fast and highly interactive solutions
 
-WordPress sites make up almost half of all websites ever, marking its significance in the history of the internet. Being 20 years old, out-of-the-box WordPress sites are not optimised for search engines (SEO) and are prone to information hacks (they made up 94% of all successful cyberattacks in 2019). WordPress developers tackle these shortfalls using plugins - there are over 59,000 plugins to choose from - crazy right? Plugins cost money, make your website run slower, and require an abundance of research.
+WordPress sites make up almost half of all websites ever, marking its significance in the history of the internet. Being 20 years old, out-of-the-box WordPress sites are not optimised for search engines (SEO) and are prone to information hacks (they made up 94% of all [successful cyberattacks in 2019](https://sucuri.net/reports/2019-hacked-website-report/)). WordPress developers tackle these shortfalls using plugins - there are over 59,000 plugins to choose from - crazy right? Plugins cost money, make your website run slower, and require an abundance of research.
 
-Squarespace has emerged as a popular, design-focused solution. Users can choose from a library of attractive themes and will be guaranteed a website that looks nice. Their sites are more secure and SEO friendly. Unfortunately, having themes at the click of a button means your website has to lug around lots of unused code, and in turn, results in notoriously slow load-times. Don’t just take my word for it - explore this PageSpeed [report ](https://pagespeed.web.dev/analysis/https-www-zafawines-com/2q7wsh2mp6?form_factor=mobile)for this wine vendor’s Squarespace site - a shocking 31/100 performance rating.
+Squarespace has emerged as a popular, design-focused solution. Users can choose from a library of attractive themes and will be guaranteed a website that looks nice. Their sites are more secure and SEO friendly. Unfortunately, having themes at the click of a button means your website has to lug around lots of unused code, and in turn, results in notoriously slow load-times. Don’t just take my word for it - explore this [PageSpeed report](https://pagespeed.web.dev/analysis/https-www-zafawines-com/2q7wsh2mp6?form_factor=mobile) for this wine vendor’s Squarespace site - a shocking 31/100 performance rating.
 
 [![Zafa Wine](/uploads/zafa-wine.png)](https://www.zafawines.com/)
 
@@ -19,9 +19,9 @@ You might want to update information dynamically - take this site for instance w
 
 ### How I develop websites
 
-###### **My websites are hand-coded using powerful modern tools like React and Astro. Read on to learn about how these tools will make your website better**
+###### My websites are hand-coded using powerful modern tools like React and Astro. Read on to learn about how these tools will make your website better
 
-React is a state-of-the-art web development tool, created by Facebook, that allows users to change what information they see interactively without having to navigate to a new URL. This is useful for many reasons; interactivity keeps the user interested; it prevents overwhelming users with too many pages; and it allows users to browse content faster - all of which prevent the loss of traffic. All sounding a bit technical? Take a look at some of the companies currently using React:
+React is a *state-of-the-art* web development tool, created by Facebook, that allows users to change what information they see interactively without having to navigate to a new URL. This is useful for many reasons; interactivity keeps the user interested; it prevents overwhelming users with too many pages; and it allows users to browse content faster - all of which prevent the loss of traffic. All sounding a bit technical? Take a look at some of the companies currently using React:
 
 ![Companies that use React](/uploads/companies-using-react.png "Companies that use React")
 
