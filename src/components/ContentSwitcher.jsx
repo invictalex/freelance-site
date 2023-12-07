@@ -31,7 +31,7 @@ export default function ContentSwitcher({contentTwo}){
                         initial={{opacity: 0, x: -100}}
                         animate={{opacity: 1, x:0}}
                         exit={{opacity: 0,  x: -100}}
-                        transition={{delay:0.3, duration: 1.5}}
+                        transition={{delay:0.3, duration: 0.6}}
                     >
                         <h3 className="font-semibold">Services</h3>
                         <div className="h-[6px] w-[150px] bg-red" />
@@ -61,7 +61,7 @@ export default function ContentSwitcher({contentTwo}){
                             initial={{opacity: 0, x: 100}}
                             animate={{opacity: 1, x:0}}
                             exit={{opacity: 0,  x: 100}}
-                            transition={{delay:0.3, duration: 1.5}}
+                            transition={{delay:0.3, duration: 0.6}}
                             
                         />
                     </AnimatePresence>
@@ -86,7 +86,7 @@ export default function ContentSwitcher({contentTwo}){
                         initial={{height:100}}
                         animate={{height:1}}
                         exit={{height:100}}
-                        transition={{delay:0.3, duration: 1.5}}
+                        transition={{delay:0.3, duration: 0.6}}
                     />
                 </AnimatePresence>
 
@@ -99,7 +99,7 @@ export default function ContentSwitcher({contentTwo}){
                             initial={{opacity: 0}}
                             animate={{opacity: 1}}
                             exit={{opacity: 0}}
-                            transition={{delay:0.3, duration: 1.5}}
+                            transition={{delay:0.3, duration: 0.6}}
                         >
                             <div className="markdown">
                                 <Markdown>
