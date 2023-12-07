@@ -3,7 +3,7 @@ title: Website Development
 displayNumber: 2
 image: /uploads/website.svg
 ---
-### Why I don’t moved away from web-builders
+### Why I moved away from web-builders
 
 ###### Web-builders suffice in many scenarios, but rarely deliver secure, fast and highly interactive solutions
 

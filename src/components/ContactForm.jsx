@@ -76,7 +76,7 @@ export default function ContactForm(){
                 {/*CHECKBOXES*/}
                 <p className="text-slate font-semibold">Services</p>
 
-                <div className="flex justify-between w-full gap-4">
+                <div className="flex justify-between w-full gap-2">
                     <label 
                         htmlFor="branding"
                         className={checkboxStyles}

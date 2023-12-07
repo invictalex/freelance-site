@@ -44,7 +44,7 @@ export default function Banner({content}){
                     
                 >
 
-                    <h1 className="md:max-lg:text-6xl font-bold text-5xl text-blue">
+                    <h1 className="md:max-lg:text-6xl font-bold text-5xl text-blue lg:w-[500px]">
                         {headline}
                     </h1>
 

@@ -1,11 +1,11 @@
 import  { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import Markdown from "react-markdown"
+import upArrow from "/src/images/upArrowLong.svg"
 
 
 
 export default function ContentSwitcher({contentTwo}){
-
 
     const backToTop = () => window.scrollTo({ top: 0 })
 
@@ -19,15 +19,9 @@ export default function ContentSwitcher({contentTwo}){
 
     const serviceNames = contentTwo.map((item) => (item.data.title))
 
-    const newArr = serviceNames.filter((item, i) => {
-        return i !== currentIndex
-    })
-
-    console.log(newArr)
     
     return(
             <>
-
                 <div className="container h-[75vh] max-h-[600px] text-white flex items-start mt-8 justify-between relative overflow-hidden sm:h-96 sm:items-end sm:mt-0 lg:overflow-visible">
                     
                     <AnimatePresence mode="wait">
@@ -37,7 +31,6 @@ export default function ContentSwitcher({contentTwo}){
                         initial={{opacity: 0, x: -100}}
                         animate={{opacity: 1, x:0}}
                         exit={{opacity: 0,  x: -100}}
-                        transition={{ease: "linear", duration:0.2}}
                     >
                         <h3 className="font-semibold">Services</h3>
                         <div className="h-[6px] w-[150px] bg-red" />
@@ -67,12 +60,11 @@ export default function ContentSwitcher({contentTwo}){
                             initial={{opacity: 0, x: 100}}
                             animate={{opacity: 1, x:0}}
                             exit={{opacity: 0,  x: 100}}
-                            transition={{ease: "linear", duration:0.2}}
                             
                         />
                     </AnimatePresence>
                     
-                    <div className="flex gap-5 absolute bottom-5 left-5 z-20">
+                    <div className="flex gap-5 absolute bottom-8 left-5 z-20">
                         {serviceNames.map((item, i) => (
                             <span 
                                 key={i} 
@@ -92,7 +84,6 @@ export default function ContentSwitcher({contentTwo}){
                         initial={{height:100}}
                         animate={{height:1}}
                         exit={{height:100}}
-                        transition={{ease: "linear", duration:0.2}}
                     />
                 </AnimatePresence>
 
@@ -100,19 +91,23 @@ export default function ContentSwitcher({contentTwo}){
 
                     <AnimatePresence mode="wait">
                         <motion.div
-                            className="container markdown"
+                            className="container"
                             key={currentIndex}
                             initial={{opacity: 0}}
                             animate={{opacity: 1}}
                             exit={{opacity: 0}}
-                            transition={{ease: "linear", duration:0.2}}
                         >
-                            <Markdown>
-                                {body}
+                            <div className="markdown">
+                                <Markdown>
+                                    {body}
+                                </Markdown>
+                            </div>
 
-                            </Markdown>
-                            <p className="mr-10 text-right text-lg font-bold text-purple mt-20" >
-                                <span onClick={backToTop} className="cursor-pointer">More services</span>
+                            <p className="pt-20 text-right text-lg font-bold" >
+                                <span onClick={backToTop} className="cursor-pointer mt-20">
+                                    More services
+                                    <img src={upArrow.src} className="w-5 h-5 inline mb-2 ml-2"/>
+                                </span>
                             </p>
                         </motion.div>
                     </AnimatePresence>

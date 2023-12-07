@@ -40,7 +40,7 @@ export default function Timeline({content}) {
 
 
     return(
-        <div ref={ref} className="w-80 pb-64 h-[400px] overflow-scroll scrollbar-hide">
+        <div ref={ref} className="w-80 pb-64 h-[410px] overflow-scroll scrollbar-hide">
             {timeline}
         </div>
     )
