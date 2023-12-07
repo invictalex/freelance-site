@@ -22,32 +22,32 @@ comparisonChart:
   workType:
     - heading: Find an agency
       bulletPoint:
-        - tick: false
-          text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
         - tick: true
-          text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
+          text: Own the website outright
         - tick: false
-          text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
+          text: Expensive (£3000+)
         - tick: false
-          text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
+          text: Some customisability, preset themes that can be altered
+        - tick: false
+          text: Technology level varied
     - bulletPoint:
         - tick: true
-          text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
+          text: Own the website outright
         - tick: true
-          text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
+          text: Moderate (£1500 or less)
         - tick: true
-          text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
+          text: Full customisability as per your request
         - tick: true
-          text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
+          text: Advanced "web-app" technology
       heading: Work with me
     - heading: Use a web-builder
       bulletPoint:
-        - tick: true
-          text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
         - tick: false
-          text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
+          text: Never own the website
         - tick: true
-          text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
+          text: Inexpensive
         - tick: false
-          text: Lorem ipsum dolor sit amet consectetur, adipiscing elit nisi orci.
+          text: No customisability, limited to preset themes
+        - tick: false
+          text: Extremely dated technology
 ---
