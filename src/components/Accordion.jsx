@@ -35,11 +35,11 @@ export default function Accordion({content}){
             initial={{height: "4rem"}}
         >
             <div className="flex items-center justify-between  my-5">
-                <h6 className="font-normal group-hover:underline ">
+                <h4 className="text-xl font-normal group-hover:underline ">
                     {item}
-                </h6>
+                </h4>
                 <img 
-                src={downArrow.src} className="w-7 h-7 duration-150"
+                src={downArrow.src} alt="downArrow" className="w-7 h-7 duration-150"
                 style={display[i] ? {transform: "rotate(180deg)"} : {transform: "rotate(0deg)"}}
                 />
 
