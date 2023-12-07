@@ -13,7 +13,7 @@ export default function ComparisonTable({content}){
         
             <li 
                 key={i}
-                className="border-b border-white border-opacity-40 border-solid py-5 last-of-type:border-none flex gap-2 items-sart"
+                className="border-b border-white border-opacity-40 border-solid h-20 last-of-type:border-none flex gap-2 items-center"
             >
                 <img src={dataPoint.tick ? tick.src : cross.src} alt="tick" className={dataPoint.tick ? "w-4 h-4 mt-1" : "w-3 h-3 mt-2"}/>
 

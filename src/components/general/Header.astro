@@ -1,6 +1,6 @@
 ---
 import * as assets from "/src/content/general/assets.md"
-import BurgerMenu from "/src/components/general/BurgerMenu.jsx"
+import BurgerMenu from "/src/components/general/BurgerMenu"
 const hoverStyles = "after:block after:w-0 after:h-px after:bg-white after:duration-300 hover:after:w-full"
 
 ---
@@ -8,7 +8,7 @@ const hoverStyles = "after:block after:w-0 after:h-px after:bg-white after:durat
 <nav class="fixed z-20 top-0 left-0 h-20 w-full  flex justify-center backdrop-blur-md bg-slate bg-opacity-50 z-50">
 
     <div class="container flex justify-between items-center m-auto">
-        <a href="/"><img src={assets.frontmatter.headerLogo} class="h-auto w-16" /></a>
+        <a href="/"><img src={assets.frontmatter.headerLogo} class="h-auto w-16" alt="headerLogo"/></a>
 
         <ul class="flex items-center gap-5 text-white max-lg:hidden">
 
