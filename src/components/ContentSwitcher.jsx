@@ -62,7 +62,10 @@ export default function ContentSwitcher({contentTwo}){
                             animate={{opacity: 1, x:0}}
                             exit={{opacity: 0,  x: 100}}
                             transition={{delay:0.3, duration: 0.6}}
-                            
+                            width="476"
+                            height="485"
+                            decoding="async"
+                            loading="lazy"
                         />
                     </AnimatePresence>
                     
