@@ -1,7 +1,7 @@
 ---
 title: Branding & Design
 displayNumber: 1
-image: /uploads/branding.svg
+image: /uploads/branding.webp
 ---
 ### Choosing your colours
 

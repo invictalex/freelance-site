@@ -1,7 +1,7 @@
 ---
 title: Website Development
 displayNumber: 2
-image: /uploads/website.svg
+image: /uploads/website.webp
 ---
 ### How I develop web-apps
 

@@ -1,7 +1,7 @@
 ---
 title: Content Management
 displayNumber: 3
-image: /uploads/content.svg
+image: /uploads/content.webp
 ---
 ### How you’ll manage your content
 
