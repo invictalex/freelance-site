@@ -53,7 +53,7 @@ export default function ContentSwitcher({contentTwo}){
                     </AnimatePresence>
 
                     <AnimatePresence mode="wait">
-                        <motion.img 
+                        {image &&<motion.img 
                             src={image} 
                             className="absolute -right-24 -bottom-16 w-80 lg:w-[27rem] lg:right-0 lg:-bottom-20 "
                             alt="banner-image"
@@ -66,7 +66,7 @@ export default function ContentSwitcher({contentTwo}){
                             height="485"
                             decoding="async"
                             loading="lazy"
-                        />
+                        />}
                     </AnimatePresence>
                     
                     <div className="flex gap-5 absolute bottom-8 left-5 z-20">
